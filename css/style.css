@@ -1,0 +1,84 @@
+/* RESETS GLOBALLY */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* HEADER ---> STARTS */
+header .contact-summary {
+    height: 50px;
+    background-color: #323232fa;
+}
+
+header .contact-summary a {
+    color: #b5b5b5;
+    text-decoration: none;
+}
+
+header nav {
+    height: 6rem;
+}
+
+header .navbar-nav {
+  gap: 2rem; 
+}
+
+header .navbar-nav .nav-link {
+  font-weight: 500; 
+  color: #333; 
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+header .navbar-nav .nav-link:hover {
+  color: #007bff; 
+  border-bottom: 0.125rem solid #007bff;
+  padding-bottom: 1px;
+}
+
+
+/* HEADER ---> ENDS */
+
+
+
+/* HEROES SECTION ---> STARTS */
+.heroes {
+    height: 80vh;
+    overflow: hidden;
+}
+
+.heroes .carousel,
+.heroes .carousel-inner,
+.heroes .carousel-item {
+    height: 100%;
+}
+
+.heroes .carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.heroes .carousel-caption {
+    bottom: 40%;
+    left: 10%;
+    text-align: left;
+}
+
+.heroes .carousel-caption h1 {
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.heroes .carousel-caption p {
+    color: #ddd;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.heroes .carousel .carousel-control-prev {
+    padding-right: 8rem !important;
+}
+
+.heroes .carousel .carousel-control-next {
+    padding-left: 7rem !important;
+}
+
+/* HEROES SECTION ---> ENDS */
