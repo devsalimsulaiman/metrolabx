@@ -4,6 +4,10 @@
     padding: 0;
 }
 
+h3, h3 a, h3 span {
+    font-family: 'Twemoji Country Flags', Muli !important;
+}
+
 a {
     text-decoration: none;
     color: #0c0c0c;
@@ -17,7 +21,7 @@ header {
 
 header .contact-summary {
     height: 3.125rem;
-    background-color: #302f2ffa;
+    background-color: #000000;
     transition: transform 0.3s ease;
 }
 
@@ -142,18 +146,47 @@ header .navbar-nav .nav-link:hover {
 }
 
 .briefing-cards .card {
-    background-image: url(/images/bg-curves.svg);
     background-size: 120%;
     background-repeat: no-repeat;
     background-position: center;
+    height: 75vh;
+    border: none;
 }
+
+.briefing-cards .card a {
+    font-size: 12px;
+}
+
+.briefing-cards .card-software {
+    background-color: #23475F;
+    background-image: url(/images/bg-curve-blue.svg);
+}
+
+.briefing-cards .card-ai {
+    background-color: #F8F8FF;
+    background-image: url(/images/bg-curve-white.svg);
+}
+.briefing-cards .card-ai i {
+    color: #064991 !important;
+}
+.briefing-cards .card-ai a {
+    color: #064991 !important;
+}
+
+.briefing-cards .card-arch {
+    background-color: #13444B;
+    background-image: url(/images/bg-curve-green.svg);
+}
+
 
 .briefing-cards .card-header i {
     font-size: 3.5rem;
 }
 
 .briefing-cards .card-title {
-    font-size: 1.4rem;
+        font-size: 1.25rem;
+    line-height: 1.4;
+    font-weight: 600;
 }
 
 .briefing-cards .card-body {
@@ -161,7 +194,8 @@ header .navbar-nav .nav-link:hover {
 }
 
 .briefing-cards .card-text {
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
+    line-height: 1.875;
 }
 
 /* BRIEFING CARDS SECTION ---> ENDS */
