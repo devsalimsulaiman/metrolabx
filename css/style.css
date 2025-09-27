@@ -172,8 +172,13 @@ header.sticky nav {
         border: none;
     }
 
-    .card a {
+    a {
         font-size: 12px;
+    }
+
+    .ai-logo {
+        width: 5rem;
+        margin-top: -1rem;
     }
 
     .card-software {
@@ -201,7 +206,7 @@ header.sticky nav {
 
 
     .card-header i {
-        font-size: 3.5rem;
+        font-size: 4rem;
     }
 
     .card-title {
