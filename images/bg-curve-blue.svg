@@ -1,19 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
 <!-- Creator: CorelDRAW X6 -->
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="6.62622in" height="6.89453in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
-viewBox="0 0 6389 6648"
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="6.18652in" height="6.22065in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 6204 6238"
  xmlns:xlink="http://www.w3.org/1999/xlink">
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#373435;stroke-width:2.89259}
-    .fil0 {fill:#19374F}
+    .fil0 {fill:#1C525C}
    ]]>
   </style>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>
-  <ellipse class="fil0 str0" transform="matrix(1.71322 -0 0.321359 1.07124 3194.49 3323.84)" rx="1770" ry="3101"/>
+  <path class="fil0" d="M1449 0c1742,0 4015,874 4588,2783 572,1908 -376,3455 -2118,3455 -1742,0 -2977,-2014 -3549,-3922 -572,-1908 -663,-2316 1079,-2316z"/>
  </g>
 </svg>

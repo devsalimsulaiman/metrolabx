@@ -12,8 +12,15 @@
     font-style: normal;
 }
 
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/fonts/Comfortaa.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
-    --primary-blue: #0C5ADB;
+    --primary-blue: #0F61D4;
     --primary-dark: #232323;
     --primary-grey: #616161;
 }
@@ -21,7 +28,7 @@
 h3,
 h5,
 h6,
-p {
+h1 p {
     font-family: 'Muli', sans-serif;
 }
 
@@ -32,60 +39,56 @@ a {
 
 /* HEADER ---> STARTS */
 header {
-    position: relative;
-    z-index: 1000;
-
-
-    .contact-summary {
-        height: 3.125rem;
-        background-color: rgba(50, 50, 50, 0.98);
-        transition: transform 0.3s ease;
-    }
-
-    .contact-summary a:first-child {
-        font-size: 0.85rem;
-        margin-right: 2rem;
-    }
-
-    .contact-summary a {
-        color: #b5b5b5;
-    }
-
-    .navbar-brand img {
-        height: 3.5rem;
-        width: auto;
-        transition: height 0.3s ease;
-    }
-
-    .sticky .navbar-brand img {
-        height: 3.4rem;
-    }
-
     nav {
         height: 6rem;
         background-color: white;
         transition: all 0.3s ease-in-out;
-        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+        .navbar-brand {
+            img {
+                height: 2.8rem;
+                width: auto;
+                transition: height 0.3s ease;
+            }
+        }
+
+        .nav-link {
+            transition: all 0.4s ease-in-out;
+            color: #000000;
+            letter-spacing: 0.02em;
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 0.9rem;
+
+            &:hover {
+                border: 1px solid var(--primary-blue);
+                border-radius: 8px;
+                padding: 12px 48px !important;
+                background-color: var(--primary-blue);
+                color: #FFFFFF;
+            }
+        }
+
+        .navbar-nav {
+            gap: 2rem;
+        }
+
     }
 
+    .free-consultation-btn {
+        background-color: transparent;
+        border: 1px solid var(--primary-blue);
+        padding: 12px 24px;
+        border-radius: 8px;
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 0.9rem;
+        transition: background-color 0.7s ease;
 
-    .navbar-nav {
-        gap: 2rem;
-    }
-
-    .navbar-nav .nav-link {
-        transition: all 0.3s ease-in-out;
-        font-weight: 500;
-        color: #313131;
-        letter-spacing: 0.02em;
-        font-family: 'Muli', sans-serif;
-        font-size: 17px;
-    }
-
-    .navbar-nav .nav-link:hover {
-        color: var(--primary-blue);
-        border-bottom: 2px solid var(--primary-blue);
-        padding-bottom: 1px;
+        /* On hover */
+        &:hover {
+            background-color: var(--primary-blue);
+            border: 1px solid #FFFFFF;
+            color: #FFFFFF;
+        }
     }
 }
 
@@ -94,7 +97,6 @@ header.sticky nav {
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     animation: slideDown 0.3s ease-in-out;
 }
 
@@ -113,8 +115,7 @@ header.sticky nav {
 
 /* HEROES SECTION ---> STARTS */
 .heroes {
-    height: calc(100vh - 9.125rem);
-    overflow: hidden;
+    height: 100vh;
 
     .carousel,
     .carousel-inner,
@@ -122,35 +123,52 @@ header.sticky nav {
         height: 100%;
     }
 
-    .carousel-item img {
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-    }
+    .carousel {
+        .carousel-control-prev-icon {
+            background-image: url(/images/prev-icon.svg);
+        }
 
-    .carousel-caption {
-        bottom: 30%;
-        left: 10%;
-        text-align: left;
-    }
+        .carousel-control-next-icon {
+            background-image: url(/images/next-icon.svg);
+        }
 
-    .carousel-caption h1 {
-        color: #fff;
-        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
-    }
+        .carousel-control-next {
+            width: fit-content;
+            padding-right: 5%;
+        }
 
-    .carousel-caption p {
-        color: #ddd;
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-        width: 70%;
-    }
+        .carousel-control-prev {
+            width: fit-content;
+            padding-left: 5%;
+        }
 
-    .carousel .carousel-control-prev {
-        padding-right: 8rem !important;
-    }
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: fit-content;
+        }
 
-    .carousel .carousel-control-next {
-        padding-left: 7rem !important;
+        .carousel-inner {
+            .carousel-caption {
+                bottom: 45%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h1 {
+                    font-weight: 600;
+                    width: 70%;
+
+                    span {
+                        color: var(--primary-blue);
+                    }
+                }
+
+                p {
+                    font-size: 1.1rem;
+                    width: 90%;
+                }
+            }
+        }
     }
 
 }
@@ -168,12 +186,12 @@ header.sticky nav {
         background-size: 120%;
         background-repeat: no-repeat;
         background-position: center;
-        height: 75vh;
+        height: 65vh;
         border: none;
     }
 
     a {
-        font-size: 12px;
+        font-size: 0.75rem;
     }
 
     .ai-logo {
@@ -220,14 +238,14 @@ header.sticky nav {
     }
 
     .card-text {
-        font-size: 0.9375rem;
         line-height: 1.875;
         font-family: 'Open-sans', sans-serif;
-        font-size: 15px;
+        font-size: 0.85rem;
     }
 }
 
 /* BRIEFING CARDS SECTION ---> ENDS */
+
 
 
 /* OUR SOFTWARE ---> STARTS */
@@ -254,10 +272,9 @@ header.sticky nav {
             -webkit-text-stroke-color: var(--primary-dark);
         }
 
-        h6 {
-            font-size: 20px;
-            font-weight: 400;
-            line-height: 32px;
+        p {
+            font-size: 1.1rem;
+            line-height: 2rem;
             color: var(--primary-grey);
         }
 
@@ -275,9 +292,25 @@ header.sticky nav {
 
             p {
                 color: var(--primary-grey);
-                font-size: 16px;
-                line-height: 1.7rem;
-                font-family: 'Open-sans', sans-serif;
+                font-size: 1rem;
+                font-family: 'Muli', sans-serif;
+            }
+        }
+
+        .know-more-btn {
+            background-color: transparent;
+            border: 1px solid var(--primary-blue);
+            padding: 16px 24px;
+            border-radius: 8px;
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 0.9rem;
+            transition: background-color 0.7s ease;
+
+            /* On hover */
+            &:hover {
+                background-color: var(--primary-blue);
+                border: 1px solid #FFFFFF;
+                color: #FFFFFF;
             }
         }
 
