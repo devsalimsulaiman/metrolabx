@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW X6 -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="5.54744in" height="5.77552in" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 5556 5784"
+ xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str1 {stroke:#2D4356;stroke-width:139.103}
+    .str0 {stroke:#2F4558;stroke-width:139.103}
+    .fil3 {fill:none}
+    .fil1 {fill:#0F61D4}
+    .fil2 {fill:#65B4B9}
+    .fil0 {fill:#E1EBF4}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_350601576">
+   <polygon class="fil0" points="2623,3128 2575,3503 2539,4272 2685,4863 3659,5541 4453,5714 4882,5556 4854,5107 4994,4237 5471,4237 5064,3060 5219,2244 4656,2244 4656,2670 4391,3128 "/>
+   <ellipse class="fil1 str0" cx="462" cy="364" rx="294" ry="295"/>
+   <ellipse class="fil2 str0" cx="364" cy="2399" rx="294" ry="295"/>
+   <ellipse class="fil1 str0" cx="364" cy="3648" rx="294" ry="295"/>
+   <ellipse class="fil1 str0" cx="1234" cy="4237" rx="294" ry="295"/>
+   <ellipse class="fil1 str0" cx="1950" cy="4938" rx="294" ry="295"/>
+   <ellipse class="fil2 str0" cx="1613" cy="2511" rx="294" ry="295"/>
+   <ellipse class="fil1 str0" cx="1613" cy="1585" rx="294" ry="295"/>
+   <circle class="fil2 str0" cx="3746" cy="813" r="276"/>
+   <circle class="fil2 str0" cx="3689" cy="1936" r="268"/>
+   <circle class="fil2 str0" cx="4251" cy="1360" r="242"/>
+   <polyline class="fil3 str0" points="462,659 462,1585 925,1809 925,2932 1262,3171 1262,3942 "/>
+   <line class="fil3 str0" x1="364" y1="3353" x2="364" y2= "2693" />
+   <polyline class="fil3 str0" points="925,1809 925,701 1652,1120 1652,1291 "/>
+   <polyline class="fil3 str0" points="1613,2806 1613,3662 2455,2820 2455,1445 2132,1122 2132,280 "/>
+   <path class="fil3 str0" d="M1950 4644l0 -842 674 -674 1768 0 265 -458 0 -426 551 0 13 547 -155 268 422 952 -14 225 -477 0c12,362 76,256 -238,479 295,190 293,196 98,390l28 449c38,403 -2143,40 -2357,-1066l28 -435"/>
+   <path class="fil3 str0" d="M3520 971l-251 291 -463 -14 -365 -323 -14 -786 1165 70c669,200 1207,558 1501,1207l113 774"/>
+   <polyline class="fil3 str0" points="3507,3128 3507,2567 4265,2567 4265,1602 "/>
+   <polyline class="fil3 str0" points="3128,3128 3128,2539 2876,2287 2876,1627 3311,1627 3466,1782 "/>
+   <line class="fil3 str1" x1="4515" y1="1389" x2="5049" y2= "1379" />
+  </g>
+ </g>
+</svg>

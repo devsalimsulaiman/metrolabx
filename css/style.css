@@ -48,7 +48,6 @@ header {
             img {
                 height: 2.8rem;
                 width: auto;
-                transition: height 0.3s ease;
             }
         }
 
@@ -157,6 +156,7 @@ header.sticky nav {
                 h1 {
                     font-weight: 600;
                     width: 70%;
+                    font-size: 2.3rem;
 
                     span {
                         color: var(--primary-blue);
@@ -172,8 +172,8 @@ header.sticky nav {
     }
 
 }
-
 /* HEROES SECTION ---> ENDS */
+
 
 
 /* BRIEFING CARDS SECTION ---> STARTS */
@@ -181,71 +181,69 @@ header.sticky nav {
     padding-top: 6rem;
     padding-bottom: 6rem;
 
-
     .card {
         background-size: 120%;
         background-repeat: no-repeat;
         background-position: center;
-        height: 65vh;
-        border: none;
-    }
-
-    a {
-        font-size: 0.75rem;
-    }
-
-    .ai-logo {
-        width: 5rem;
-        margin-top: -1rem;
-    }
-
-    .card-software {
-        background-color: #23475F;
-        background-image: url(/images/bg-curve-blue.svg);
-    }
-
-    .card-ai {
-        background-color: #F8F8FF;
+        height: 70vh;
+        background-color: #F9FEFE;
         background-image: url(/images/bg-curve-white.svg);
+        transition: all 0.4s ease-in-out;
+        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+
+        .card-header {
+            img {
+                width: 6rem;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .software-icon {
+                width: 6.5rem;
+                transition: all 0.4s ease-in-out;
+            }
+
+            .card-title {
+                font-size: 1.5rem;
+                line-height: 1.4;
+                font-weight: 500;
+            }
+
+        }
+
+        .card-body {
+            padding: 1rem 2.2rem;
+
+            .card-text {
+                line-height: 1.875;
+                font-family: 'Open-sans', sans-serif;
+                font-size: 0.85rem;
+            }
+        }
+
+        .card-footer {
+            a {
+                color: var(--primary-blue) !important;
+                font-size: 0.75rem;
+            }
+        }
+
+        &:hover {
+            height: 73vh;
+            border: 1px solid var(--primary-blue);
+
+            img {
+                width: 7rem;
+            }
+
+            .software-icon {
+                width: 7.5rem;
+            }
+        }
     }
 
-    .card-ai i {
-        color: var(--primary-blue) !important;
-    }
 
-    .card-ai a {
-        color: var(--primary-blue) !important;
-    }
-
-    .card-arch {
-        background-color: #13444B;
-        background-image: url(/images/bg-curve-green.svg);
-    }
-
-
-    .card-header i {
-        font-size: 4rem;
-    }
-
-    .card-title {
-        font-size: 1.25rem;
-        line-height: 1.4;
-        font-weight: 500;
-    }
-
-    .card-body {
-        padding: 1rem 2.2rem;
-    }
-
-    .card-text {
-        line-height: 1.875;
-        font-family: 'Open-sans', sans-serif;
-        font-size: 0.85rem;
-    }
 }
-
 /* BRIEFING CARDS SECTION ---> ENDS */
-
 
 
 /* OUR SOFTWARE ---> STARTS */
@@ -253,8 +251,34 @@ header.sticky nav {
     padding-top: 4rem;
     padding-bottom: 6rem;
 
+    .software-snapshots {
+        img {
+            width: 90%;
+            transition: all 0.4s ease-in-out;
+
+            &:hover {
+                cursor: zoom-in;
+                width: 95%;
+                position: relative;
+                z-index: 2;
+            }
+        }
+
+        #first-img {
+            margin-bottom: -18%;
+        }
+
+        #second-img {
+            margin-left: 15%;
+        }
+
+        #third-img {
+            margin-top: -20%;
+        }
+    }
+
     .software-summary {
-        padding-top: 2rem;
+        padding: 2rem 0 0 6rem;
 
         h4 {
             color: var(--primary-blue);
@@ -264,7 +288,7 @@ header.sticky nav {
         }
 
         h5 {
-            font-size: 42px;
+            font-size: 2.375rem;
             font-weight: 900;
             color: var(--primary-dark);
             letter-spacing: -1.6px;
@@ -273,7 +297,7 @@ header.sticky nav {
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 1rem;
             line-height: 2rem;
             color: var(--primary-grey);
         }
@@ -292,7 +316,7 @@ header.sticky nav {
 
             p {
                 color: var(--primary-grey);
-                font-size: 1rem;
+                font-size: 0.95rem;
                 font-family: 'Muli', sans-serif;
             }
         }
@@ -306,7 +330,6 @@ header.sticky nav {
             font-size: 0.9rem;
             transition: background-color 0.7s ease;
 
-            /* On hover */
             &:hover {
                 background-color: var(--primary-blue);
                 border: 1px solid #FFFFFF;
@@ -317,5 +340,62 @@ header.sticky nav {
 
     }
 }
-
+.snapshotsModal img {
+  max-height: 90vh;
+  object-fit: contain;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* makes white icons visible on dark backgrounds */
+}
 /* OUR SOFTWARE  ---> ENDS */
+
+
+
+/* STATISTICS --> START */
+.statistics {
+  background-color: var(--primary-dark);
+  padding-top: 4rem;
+  padding-bottom: 6rem;
+  /* background-image: url(/images/bg-curve-white.svg); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  z-index: 1;
+
+  blockquote {
+    h3 {
+      font-weight: 600;
+      font-style: italic;
+      font-size: 1.5rem;
+      text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .counter {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: 2px var(--primary-dark);
+    text-stroke: 2px var(--primary-dark);
+    transition: all 0.4s ease-in-out;
+
+    &:hover {
+      transform: scale(1.1);
+      -webkit-text-stroke: 2px var(--primary-dark);
+    }
+  }
+
+  p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 0.9rem;
+    color: var(--primary-dark);
+
+    span {
+      font-size: 0.8rem;
+      color: var(--primary-grey);
+    }
+  }
+}
+/* STATISTICS --> END */
