@@ -421,7 +421,7 @@ header.sticky nav {
     }
 
     .interests {
-        padding: 6rem 3rem;
+        padding: 6rem 0 4rem 3rem;
 
         .accordion-item {
             padding: 0.5rem 0;
@@ -429,7 +429,7 @@ header.sticky nav {
             .accordion-button {
                 background-color: transparent;
                 color: var(--primary-dark);
-                font-weight: 600;
+                font-weight: 400;
                 border: none;
                 box-shadow: none !important;
                 transition: all 0.3s ease;
@@ -480,15 +480,17 @@ header.sticky nav {
 
 
     .engagement-process {
-        padding: 6rem 0 6rem 3rem;
-        background-color: #f8f9fa;
+        padding: 6rem 0 4rem 3rem;
+        background-color: #faf8f8;
 
         .stepper {
+            padding-left: 2rem;
 
             .step {
                 position: relative;
                 padding: 2rem 1rem 2rem 3rem;
                 transition: all 0.3s ease;
+
 
                 &:hover {
                     background-color: rgba(255, 255, 255, 0.6);
