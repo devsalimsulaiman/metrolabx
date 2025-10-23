@@ -1,20 +1,3 @@
-// FOR SOFTWARE SNAPSHOTS' IMAGES ENLARGEMENT ON MODAL AND SLIDER
-document.addEventListener("DOMContentLoaded", () => {
-  const images = document.querySelectorAll(".software-snapshots img");
-  const carousel = new bootstrap.Carousel(document.getElementById("snapshotsCarousel"), {
-    interval: false
-  });
-
-  images.forEach((img, index) => {
-    img.addEventListener("click", () => {
-      // Move carousel to corresponding image
-      carousel.to(index);
-    });
-  });
-});
-
-
-
 // MOTIVATION ON SOFTWARE, AI, ARCHITECTURE. Counter animation
 document.addEventListener("DOMContentLoaded", () => {
   const counters = document.querySelectorAll(".counter");
