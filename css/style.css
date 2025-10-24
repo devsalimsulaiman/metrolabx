@@ -341,17 +341,6 @@ header.sticky nav {
     }
 }
 
-.snapshotsModal img {
-    max-height: 90vh;
-    object-fit: contain;
-}
-
-.carousel-control-prev-icon,
-.carousel-control-next-icon {
-    filter: invert(1);
-    /* makes white icons visible on dark backgrounds */
-}
-
 /* OUR SOFTWARE  ---> ENDS */
 
 
@@ -361,7 +350,7 @@ header.sticky nav {
     background-color: var(--primary-dark);
     padding-top: 4rem;
     padding-bottom: 6rem;
-    /* background-image: url(/images/bg-curve-white.svg); */
+    /* background-image: url('../images/pattern.svg'); */
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -422,7 +411,7 @@ header.sticky nav {
     }
 
     .interests {
-        padding: 6rem 0 4rem 3rem;
+        padding: 6rem 3rem 4rem 3rem;
 
         .accordion-item {
             padding: 0.5rem 0;
@@ -481,8 +470,7 @@ header.sticky nav {
 
 
     .engagement-process {
-        padding: 6rem 0 4rem 3rem;
-        background-color: #faf8f8;
+        padding: 6rem 3rem 4rem 3rem;
 
         .stepper {
             padding-left: 2rem;

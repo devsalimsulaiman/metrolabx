@@ -66,11 +66,10 @@
 
     <!-- HEADER -->
     <header id="mainHeader" class="sticky">
-
         <!-- NAV -->
         <nav class="navbar navbar-expand-lg px-3 shadow-sm" aria-label="Primary navigation">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <img src="images/logo.svg" alt="metrolabx">
                 </a>
 
@@ -86,8 +85,9 @@
                     <ul class="navbar-nav mx-auto">
                         <li class="nav-item"><a class="nav-link" href="/about.html">About</a></li>
                         <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#processes">Processes</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
                         <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/processes.html">Processes</a></li>
                     </ul>
                 </div>
 
@@ -163,7 +163,6 @@
                 </button>
             </div>
         </section>
-
 
         <!-- SECTION: BRIEFING CARDS -->
         <section class="briefing-cards container">
@@ -340,15 +339,14 @@
             </div>
         </section>
 
-
-
         <!-- PROCESS STEPS & INTEREST -->
-        <section class="process-and-interest">
-            <div class="row gx-0">
+        <section class="process-and-interest overflow-x-hidden">
+            <!-- <div class="container"> -->
+            <div class="row">
 
                 <!-- INTERESTS -->
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 bg-white">
-                    <div class="interests">
+                <div id="interests" class="col-xl-6 col-lg-6 col-md-12 col-sm-12 bg-white">
+                    <div class="interests container">
                         <div class="heading-texts mb-5" data-aos="fade-right">
                             <h2 class="fw-bold">Our Interests</h2>
                             <p>We explore a broad spectrum of industries and ideas — where technology, creativity, and
@@ -560,12 +558,11 @@
 
                         </div>
                     </div>
-
                 </div>
 
                 <!-- PROCESS -->
-                <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="engagement-process">
+                <div id="processes" class="col-xl-6 col-lg-6 col-md-12 col-sm-12 bg-light">
+                    <div class="engagement-process container">
 
                         <div class="heading-texts mb-5" data-aos="fade-left">
                             <h2 class="fw-bold">Our Engagement Process</h2>
@@ -630,6 +627,7 @@
                     </div>
                 </div>
             </div>
+            <!-- </div> -->
         </section>
 
     </main>
