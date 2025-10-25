@@ -114,7 +114,11 @@ header.sticky nav {
 
 /* HEROES SECTION ---> STARTS */
 .heroes {
-    height: 100vh;
+    position: relative;
+    height: 75vh;
+    background: linear-gradient(rgba(255, 255, 255, 0.9),
+            rgba(1, 90, 122, 0)),
+        url('../images/statistics-bg.svg') center/cover no-repeat;
 
     .carousel,
     .carousel-inner,
@@ -146,30 +150,39 @@ header.sticky nav {
 
         .carousel-inner {
             .carousel-caption {
-                bottom: 45%;
+                top: 40%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                text-align: center;
 
                 h1 {
                     font-weight: 600;
                     width: 70%;
                     font-size: 2.3rem;
+                    color: #ffffff;
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 
                     span {
                         background: linear-gradient(90deg, #0F61D4, #00d4ff);
                         -webkit-background-clip: text;
                         -webkit-text-fill-color: transparent;
                         background-clip: text;
+                        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+                        /* light glow for gradient text */
                     }
                 }
 
                 p {
                     font-size: 1.1rem;
                     width: 90%;
+                    color: #000000 !important;
+                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+                    /* light shadow for clarity */
                 }
             }
         }
+
     }
 
 }
@@ -180,7 +193,8 @@ header.sticky nav {
 
 /* BRIEFING CARDS SECTION ---> STARTS */
 .briefing-cards {
-    padding-top: 6rem;
+    /* padding-top: 6rem; */
+    margin-top: -2rem;
     padding-bottom: 6rem;
 
     .card {
@@ -247,6 +261,7 @@ header.sticky nav {
 }
 
 /* BRIEFING CARDS SECTION ---> ENDS */
+
 
 
 /* OUR SOFTWARE ---> STARTS */
@@ -346,15 +361,14 @@ header.sticky nav {
 
 /* OUR SOFTWARE  ---> ENDS */
 
+
+
 /* STATISTICS --> START */
 .statistics {
-    background-color: var(--primary-dark);
+    background-color: #000000;
     padding-top: 4rem;
     padding-bottom: 6rem;
-    /* background-image: url('../images/pattern.svg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+    position: relative;
 
     h3 {
         font-weight: 600;
@@ -657,10 +671,10 @@ header.sticky nav {
             transition: all 0.3s ease;
 
             &:focus {
-                 &:focus {
-                border-color: #0074ff;
-                box-shadow: none !important;
-            }
+                &:focus {
+                    border-color: #0074ff;
+                    box-shadow: none !important;
+                }
             }
         }
 
