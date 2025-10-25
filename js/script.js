@@ -41,3 +41,67 @@ document.addEventListener("DOMContentLoaded", () => {
 
   observer.observe(section);
 });
+
+
+// contact form
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const inputs = form.querySelectorAll("input, textarea");
+  const submitBtn = form.querySelector("button[type='submit']");
+  const titleBtn = document.getElementById("titleDropdown");
+  const titleFeedback = document.getElementById("titleFeedback");
+  let titleSelected = false;
+
+  // Handle dropdown title selection
+  form.querySelectorAll(".dropdown-item").forEach((item) => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      titleBtn.textContent = e.target.textContent;
+      titleSelected = true;
+      titleFeedback.style.display = "none";
+      validateForm();
+    });
+  });
+
+  const validateForm = () => {
+    let allValid = titleSelected;
+    inputs.forEach((input) => {
+      if (!input.checkValidity()) allValid = false;
+    });
+    submitBtn.disabled = !allValid;
+    submitBtn.classList.toggle("active", allValid);
+  };
+
+  // Validate text inputs
+  inputs.forEach((input) => {
+    input.addEventListener("input", () => {
+      if (input.checkValidity()) {
+        input.classList.remove("is-invalid");
+        input.classList.add("is-valid");
+      } else {
+        input.classList.remove("is-valid");
+        input.classList.add("is-invalid");
+      }
+      validateForm();
+    });
+  });
+
+  // On submit
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    if (!titleSelected) {
+      titleFeedback.style.display = "block";
+      return;
+    }
+
+    form.classList.add("was-validated");
+    if (form.checkValidity() && titleSelected) {
+      alert("Message sent successfully!");
+      form.reset();
+      titleBtn.textContent = "Choose...";
+      titleSelected = false;
+      submitBtn.disabled = true;
+      submitBtn.classList.remove("active");
+    }
+  });
+});

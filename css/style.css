@@ -59,9 +59,9 @@ header {
             font-size: 0.9rem;
 
             &:hover {
-                border: 1px solid var(--primary-blue);
-                border-radius: 8px;
-                padding: 12px 48px !important;
+                border: 0.0625rem solid var(--primary-blue);
+                border-radius: 0.5rem;
+                padding: 0.75rem 3rem !important;
                 background-color: var(--primary-blue);
                 color: #FFFFFF;
             }
@@ -75,9 +75,9 @@ header {
 
     .free-consultation-btn {
         background-color: transparent;
-        border: 1px solid var(--primary-blue);
-        padding: 12px 24px;
-        border-radius: 8px;
+        border: 0.0625rem solid var(--primary-blue);
+        padding: 0.75rem 1.5rem;
+        border-radius: 0.5rem;
         font-family: 'Comfortaa', sans-serif;
         font-size: 0.9rem;
         transition: background-color 0.7s ease;
@@ -85,7 +85,7 @@ header {
         /* On hover */
         &:hover {
             background-color: var(--primary-blue);
-            border: 1px solid #FFFFFF;
+            border: 0.0625rem solid #FFFFFF;
             color: #FFFFFF;
         }
     }
@@ -157,7 +157,10 @@ header.sticky nav {
                     font-size: 2.3rem;
 
                     span {
-                        color: var(--primary-blue);
+                        background: linear-gradient(90deg, #0F61D4, #00d4ff);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                        background-clip: text;
                     }
                 }
 
@@ -188,7 +191,7 @@ header.sticky nav {
         background-color: #F9FEFE;
         background-image: url(/images/bg-curve-white.svg);
         transition: all 0.4s ease-in-out;
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+        box-shadow: rgba(0, 0, 0, 0.05) 0rem 0.0625rem 0.125rem 0rem;
 
         .card-header {
             img {
@@ -203,7 +206,7 @@ header.sticky nav {
 
             .card-title {
                 font-size: 1.5rem;
-                line-height: 1.4;
+                line-height: 2rem;
                 font-weight: 500;
             }
 
@@ -213,7 +216,7 @@ header.sticky nav {
             padding: 1rem 2.2rem;
 
             .card-text {
-                line-height: 1.875;
+                line-height: 2rem;
                 font-family: 'Open-sans', sans-serif;
                 font-size: 0.85rem;
             }
@@ -228,7 +231,7 @@ header.sticky nav {
 
         &:hover {
             height: 73vh;
-            border: 1px solid var(--primary-blue);
+            border: 0.0625rem solid var(--primary-blue);
 
             img {
                 width: 7rem;
@@ -282,7 +285,7 @@ header.sticky nav {
 
         h4 {
             color: var(--primary-blue);
-            font-size: 16px;
+            font-size: 1rem;
             font-weight: 700;
             line-height: 2rem;
         }
@@ -291,8 +294,8 @@ header.sticky nav {
             font-size: 2.375rem;
             font-weight: 900;
             color: var(--primary-dark);
-            letter-spacing: -1.6px;
-            -webkit-text-stroke-width: 1px;
+            letter-spacing: -0.1rem;
+            -webkit-text-stroke-width: 0.0625rem;
             -webkit-text-stroke-color: var(--primary-dark);
         }
 
@@ -310,7 +313,7 @@ header.sticky nav {
 
             h6 {
                 font-weight: 700;
-                line-height: 24px;
+                line-height: 2rem;
                 color: var(--primary-dark);
             }
 
@@ -323,16 +326,16 @@ header.sticky nav {
 
         .know-more-btn {
             background-color: transparent;
-            border: 1px solid var(--primary-blue);
-            padding: 16px 24px;
-            border-radius: 8px;
+            border: 0.0625rem solid var(--primary-blue);
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
             font-family: 'Comfortaa', sans-serif;
             font-size: 0.9rem;
             transition: background-color 0.7s ease;
 
             &:hover {
                 background-color: var(--primary-blue);
-                border: 1px solid #FFFFFF;
+                border: 0.0625rem solid #FFFFFF;
                 color: #FFFFFF;
             }
         }
@@ -372,7 +375,7 @@ header.sticky nav {
     .card {
         text-align: left !important;
         background: transparent;
-        border: 1px solid var(--primary-grey);
+        border: 0.0625rem solid var(--primary-grey);
         transition: all 0.4s ease-in-out;
 
         &:hover {
@@ -383,8 +386,8 @@ header.sticky nav {
             font-size: 3.5rem;
             font-weight: 800;
             color: transparent;
-            -webkit-text-stroke: 1px #FFFFFF;
-            text-stroke: 1px #FFFFFF;
+            -webkit-text-stroke: 0.0625rem #FFFFFF;
+            text-stroke: 0.0625rem #FFFFFF;
         }
 
     }
@@ -451,7 +454,7 @@ header.sticky nav {
             .accordion-body {
                 background-color: #f9f9f9;
                 font-size: 0.95rem;
-                line-height: 1.6;
+                line-height: 2rem;
                 color: var(--primary-grey);
                 padding: 1rem 1.25rem 1.25rem 1.25rem;
 
@@ -481,7 +484,7 @@ header.sticky nav {
 
                 &:hover {
                     background-color: rgba(255, 255, 255, 0.6);
-                    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 3px;
+                    box-shadow: rgba(0, 0, 0, 0.05) 0rem 0.0625rem 0.1875rem;
 
                     .number {
                         background-color: var(--primary-blue);
@@ -502,7 +505,7 @@ header.sticky nav {
                     height: 2.5rem;
                     border-radius: 50%;
                     background-color: #ffffff;
-                    border: 2px solid var(--primary-blue);
+                    border: 0.125rem solid var(--primary-blue);
                     color: var(--primary-blue);
                     font-weight: 700;
                     display: flex;
@@ -523,24 +526,24 @@ header.sticky nav {
                     p {
                         color: var(--primary-grey);
                         font-size: 0.95rem;
-                        line-height: 1.6;
+                        line-height: 2rem;
                     }
                 }
 
                 &:not(:last-child)::after {
                     content: "";
                     position: absolute;
-                    left: -8px;
+                    left: -0.5rem;
                     bottom: 0;
                     top: 2rem;
                     height: 100%;
-                    width: 2px;
+                    width: 0.125rem;
                     background-color: var(--primary-blue);
                     z-index: 1;
                 }
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 48rem) {
                 padding-left: 1.5rem;
 
                 .step {
@@ -559,63 +562,140 @@ header.sticky nav {
 
 /*PRCESS STEP ---> END*/
 
-/*TRUSTEES ---> START*/
+
+
+
+/* TRUSTEES ---> START */
 .trusted-section {
-  background: linear-gradient(180deg, #01597A 0%, #0098C7 100%);
-  position: relative;
-  color: #fff;
-  padding: 80px 0;
-  overflow: hidden;
+    position: relative;
+    color: #fff;
+    padding: 6rem 0 !important;
+    background: linear-gradient(180deg, #01597A 0%, #0F61D4 100%);
+    overflow: hidden;
+
+    .container {
+        position: relative;
+        z-index: 2;
+    }
+
+    h5 {
+        font-size: 1.8rem;
+        text-transform: capitalize;
+    }
+
+    img {
+        opacity: 0.9;
+        transition: all 0.3s ease;
+        width: 20%;
+
+        &:hover {
+            opacity: 1;
+            transform: scale(1.05);
+        }
+    }
 }
 
-/* angled bottom edge (smooth, no gaps) */
-.trusted-section::after {
-  content: "";
-  position: absolute;
-  bottom: -100px; /* move lower to hide white line */
-  left: 0;
-  width: 100%;
-  height: 60px;
-  background: #FFFFFF; /* match the gradient end color */
-  transform: skewY(-4deg);
-  transform-origin: top left;
-  z-index: 0;
+/* TRUSTEES ---> END */
+
+
+
+/* CONTACT ---> START */
+.contact-section {
+    padding: 6rem 0;
+
+    h2 {
+        font-size: 2.2rem;
+        line-height: 3rem;
+        color: #0a0a0a;
+    }
+
+    p {
+        font-size: 1rem;
+        max-width: 43.75rem;
+        line-height: 2rem;
+    }
+
+    .gradient-text {
+        background: linear-gradient(90deg, #0F61D4, #00d4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    }
+
+    a.gradient-text {
+        transition: opacity 0.3s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+
+    form {
+        .dropdown-toggle {
+            border-radius: 0.5rem;
+            background-color: #fff;
+            color: #0a0a0a;
+
+            &:focus {
+                border-color: #0074ff;
+                box-shadow: none !important;
+            }
+        }
+
+        .dropdown-menu {
+            border-radius: 0.5rem;
+        }
+
+        .form-label {
+            font-weight: 500;
+            color: #0a0a0a;
+        }
+
+        .form-control,
+        .form-select {
+            border-radius: 0.5rem;
+            transition: all 0.3s ease;
+
+            &:focus {
+                 &:focus {
+                border-color: #0074ff;
+                box-shadow: none !important;
+            }
+            }
+        }
+
+        .invalid-feedback {
+            font-size: 0.875rem;
+        }
+
+        button[type="submit"] {
+            background-color: transparent;
+            border: 0.0625rem solid var(--primary-blue);
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            font-family: 'Comfortaa', sans-serif;
+            font-size: 0.9rem;
+            transition: background-color 0.7s ease;
+
+            /* On hover */
+            &:hover {
+                background-color: var(--primary-blue);
+                border: 0.0625rem solid #FFFFFF;
+                color: #FFFFFF;
+            }
+
+            &.active {
+                opacity: 1;
+                cursor: pointer;
+            }
+        }
+
+        .disabled-btn {
+            cursor: not-allowed;
+        }
+
+    }
+
 }
 
-.trusted-section .container {
-  position: relative;
-  z-index: 2;
-}
-
-.trusted-logos img {
-  opacity: 0.9;
-  transition: all 0.3s ease;
-  filter: brightness(0) invert(1);
-}
-
-.trusted-logos img:hover {
-  opacity: 1;
-  transform: scale(1.05);
-}
-
-
-/* TRUSTEES ---> END*/
-
-
-.api-section h2 {
-  font-size: 2.2rem;
-  line-height: 1.3;
-  color: #0a0a0a;
-}
-
-.gradient-text {
-  background: linear-gradient(90deg, #0074ff, #00d4ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.api-section p {
-  font-size: 1rem;
-  max-width: 700px;
-}
+/* CONTACT ---> END */
