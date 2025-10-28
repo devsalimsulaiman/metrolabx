@@ -115,9 +115,9 @@ header.sticky nav {
 /* HEROES SECTION ---> STARTS */
 .heroes {
     position: relative;
-    height: 75vh;
+    height: 100vh;
     background: linear-gradient(rgba(255, 255, 255, 0.9),
-            rgba(1, 90, 122, 0)),
+            rgba(1, 90, 122, 0.05)),
         url('../images/statistics-bg.svg') center/cover no-repeat;
 
     .carousel,
@@ -150,7 +150,7 @@ header.sticky nav {
 
         .carousel-inner {
             .carousel-caption {
-                top: 40%;
+                top: 25%;
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -159,9 +159,9 @@ header.sticky nav {
                 h1 {
                     font-weight: 600;
                     width: 70%;
-                    font-size: 2.3rem;
+                    font-size: 2.5rem;
                     color: #ffffff;
-                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+                    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.4);
 
                     span {
                         background: linear-gradient(90deg, #0F61D4, #00d4ff);
@@ -177,7 +177,9 @@ header.sticky nav {
                     font-size: 1.1rem;
                     width: 90%;
                     color: #000000 !important;
-                    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+                    background-color: rgba(255, 255, 255, 0.8);
+                    padding: 0.5rem;
+                    /*text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);*/
                     /* light shadow for clarity */
                 }
             }
@@ -194,8 +196,10 @@ header.sticky nav {
 /* BRIEFING CARDS SECTION ---> STARTS */
 .briefing-cards {
     /* padding-top: 6rem; */
-    margin-top: -2rem;
+    margin-top: -15%;
     padding-bottom: 6rem;
+    position: relative;
+    z-index: 99999;
 
     .card {
         background-size: 120%;
