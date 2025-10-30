@@ -87,11 +87,12 @@
                         <li class="nav-item"><a class="nav-link" href="/services.html">Services</a></li>
                         <li class="nav-item"><a class="nav-link" href="#processes">Processes</a></li>
                         <li class="nav-item"><a class="nav-link" href="#interests">Interests</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/articles.html">Articles</a></li>
                         <li class="nav-item"><a class="nav-link" href="/contact.html">Contact</a></li>
                     </ul>
                 </div>
 
-                <button class="free-consultation-btn">Free Consultation</button>
+                <a href="#free-consultation" class="free-consultation-btn">Free Consultation</a>
 
             </div>
         </nav>
@@ -283,7 +284,7 @@
         </section>
 
         <!-- COMPUTERIZED AND AI CHANGE MOTIVATION -->
-        <section id="ai-change" class="statistics">
+        <section id="ai-change" class="statistics bg-dark">
             <div class="container-fluid">
                 <!-- Quote -->
                 <blockquote class="mb-5 d-flex justify-content-center">
@@ -291,7 +292,7 @@
                         “Every living business that embraced innovation was once a business that took the leap of faith
                         towards honouring the tradition of calculated risk.”
                         <p class="text-white d-inline fw-normal">
-                            &mdash; Salim Sulaiman Liman | <span class="fst-italic">Computer Scientist</span>
+                            &mdash; Salim Sulaiman Liman | <span class="fst-italic">Computer Scientist && Writer</span>
                         </p>
                     </h3>
                 </blockquote>
@@ -634,7 +635,7 @@
         <section class="trusted-section">
             <div class="container text-center">
                 <h5 class="text-white mb-5 fw-semibold">
-                    Trusted & Verified by these amazing companies
+                    Trusted & Verified by:
                 </h5>
 
                 <div class="trusted-logos d-flex flex-wrap align-items-center gap-5 pt-3">
@@ -642,123 +643,109 @@
                     <img src="images/CAC-Logo-With-WordMark-2.png" alt="CAC" class="bg-white p-2">
                     <img src="images/CAC-Logo-With-WordMark-2.png" alt="CAC" class="bg-white p-2">
                     <img src="images/CAC-Logo-With-WordMark-2.png" alt="CAC" class="bg-white p-2">
-                    <img src="images/CAC-Logo-With-WordMark-2.png" alt="CAC" class="bg-white p-2">
-                    <img src="images/CAC-Logo-With-WordMark-2.png" alt="CAC" class="bg-white p-2">
-                    <img src="images/CAC-Logo-With-WordMark-2.png" alt="CAC" class="bg-white p-2">
-                    <img src="images/CAC-Logo-With-WordMark-2.png" alt="CAC" class="bg-white p-2">
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT US SECTION -->
-
-        <!-- CONTACT US SECTION -->
-        <section class="contact-section" id="contact">
+        <!-- FREE CONSULTATION SECTION -->
+        <section class="free-consultation-section bg-light" id="free-consultation">
             <div class="container">
-                <div class="row align-items-center">
+                <h2 class="fw-bold text-center">
+                    <span class="highlighted-text">Book Free Consultation</span>
+                </h2>
+                <p class="mt-3 text-secondary text-center fw-semibold">
+                    We will get back to you within 24-hours with <span class="highlighted-text">free online
+                        session</span> booked just for you.
+                </p>
 
-                    <!-- LEFT TEXT -->
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 pe-5">
-                        <h2 class="fw-bold">
-                            Do you want to <span class="gradient-text">upgrade your business</span> with tech?
-                            <br>
-                            OR You want a <span class="gradient-text">cost efficient</span> Subscriptions?
-                        </h2>
-                        <p class="mt-3 text-secondary">
-                            Whether you're stuck paying too much for software you barely use, or you've got a business
-                            that deserves a
-                            <span class="gradient-text fw-semibold">modern digital boost</span> — we've got you covered.
-                            Let's turn your ideas into something sleek, smart, and scalable.<br><br>
-                            <strong>Go on,</strong> don't just think about it — <a href="#contact"
-                                class="gradient-text fw-semibold text-decoration-none">contact us today!</a>
-                        </p>
+                <form id="contactForm" novalidate>
+                    <div class="row align-items-end">
+
+                        <!-- Name -->
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
+                            <label for="name" class="form-label">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
+                            <div class="invalid-feedback">Please enter your name.</div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-12">
+                            <label for="email" class="form-label">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="address@mail.com" required>
+                            <div class="invalid-feedback">Please enter a valid email address.</div>
+                        </div>
+
+                        <!-- Book / Submit -->
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                            <button type="submit" class="w-100" disabled>
+                                Book Consultation
+                            </button>
+                        </div>
                     </div>
-
-
-                    <!-- RIGHT FORM -->
-                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12 ps-5">
-                        <form id="contactForm" novalidate>
-                            <div class="row g-3">
-
-                                <!-- Title (Dropdown) -->
-                                <div class="col-md-4">
-                                    <label class="form-label">Title</label>
-                                    <div class="dropdown w-100">
-                                        <button class="btn dropdown-toggle w-100 border form-select text-start"
-                                            type="button" id="titleDropdown" data-bs-toggle="dropdown"
-                                            aria-expanded="false">
-                                            Choose...
-                                        </button>
-                                        <ul class="dropdown-menu w-100" aria-labelledby="titleDropdown">
-                                            <li><a class="dropdown-item" href="#">Mr</a></li>
-                                            <li><a class="dropdown-item" href="#">Mrs</a></li>
-                                            <li><a class="dropdown-item" href="#">Miss</a></li>
-                                            <li><a class="dropdown-item" href="#">Ms</a></li>
-                                            <li><a class="dropdown-item" href="#">Dr</a></li>
-                                            <li><a class="dropdown-item" href="#">Engr</a></li>
-                                        </ul>
-                                    </div>
-                                    <div class="invalid-feedback d-block" id="titleFeedback" style="display:none;">
-                                        Please select a title.
-                                    </div>
-                                </div>
-
-                                <!-- Name -->
-                                <div class="col-md-8">
-                                    <label for="name" class="form-label">Full Name</label>
-                                    <input type="text" class="form-control" id="name" placeholder="Enter your name"
-                                        required>
-                                    <div class="invalid-feedback">Please enter your name.</div>
-                                </div>
-
-                                <!-- Email -->
-                                <div class="col-md-12">
-                                    <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" placeholder="you@example.com"
-                                        required>
-                                    <div class="invalid-feedback">Please enter a valid email address.</div>
-                                </div>
-
-                                <!-- Subject -->
-                                <div class="col-md-12">
-                                    <label for="subject" class="form-label">Subject</label>
-                                    <input type="text" class="form-control" id="subject"
-                                        placeholder="What's this about?" required>
-                                    <div class="invalid-feedback">Please provide a subject.</div>
-                                </div>
-
-                                <!-- Message -->
-                                <div class="col-md-12">
-                                    <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="4"
-                                        placeholder="Tell us how we can help you..." required></textarea>
-                                    <div class="invalid-feedback">Please enter a message.</div>
-                                </div>
-
-                                <!-- Submit -->
-                                <div class="w-100 mt-4">
-                                    <button type="submit" disabled>
-                                        Send Message
-                                    </button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-
-
-                </div>
+                </form>
             </div>
         </section>
-
-
-
-
 
     </main>
 
     <!--FOOTER -->
-    <footer></footer>
+    <footer class="bg-dark pt-5 pb-3">
+        <div class="container-fluid">
+            <div class="row py-3">
+                <!-- logo -->
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex ps-5">
+                    <img src="images/logo-light.svg" alt="MetroLabX">
+                </div>
 
+                <!-- about -->
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <h6 class="text-white">About</h6>
+                    <p class="m-0 mt-4 text-white">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Similique, veritatis ducimus
+                        voluptatem molestiae possimus aspernatur reiciendis voluptas quasi fuga laboriosam.
+                    </p>
+                </div>
+
+                <!-- quick links -->
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 ps-5">
+                    <h6 class="text-white">Quick Links</h6>
+                    <a href="privacy.html" class="text-white d-block">Privacy</a>
+                    <a href="terms.html" class="text-white d-block">Terms</a>
+                    <a href="articles.html" class="text-white">Articles</a>
+                </div>
+
+                <!-- contacts -->
+                <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                    <h6 class="text-white">Contacts</h6>
+                    <p class="text-white">
+                        <i class="fa-regular fa-clock me-1"></i>Opening Hours : 24/7 <i class="fa-solid fa-location-pin ms-2 me-1"></i>Remotely
+                    </p>
+                    <span class="d-block mb-2">
+                        <a href="https://instagram.com/metrolabx" class="text-white me-3">
+                            <i class="fab fa-instagram me-2"></i>Metrolabx
+                        </a>
+                        <a href="https://facebook.com/metrolabx" class="text-white me-3">
+                            <i class="fab fa-facebook me-2"></i>Metrolabx
+                        </a>
+                    </span>
+                    <span class="d-block">
+                        <a href="https://linkedin.com/metrolabx" class="text-white me-3">
+                            <i class="fab fa-linkedin me-2"></i>Metrolabx
+                        </a>
+                        <a href="https://x.com/metrolabx" class="text-white">
+                            <i class="fab fa-x me-2"></i>Metrolabx
+                        </a>
+                    </span>
+                </div>
+            </div>
+
+            <!-- copyright -->
+            <div class="text-light text-center pt-1">
+                <hr class="mb-3">
+                <p class="m-0">&copy;MetroLabx. &nbsp; All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 

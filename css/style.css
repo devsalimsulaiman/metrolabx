@@ -23,6 +23,7 @@
     --primary-blue: #0F61D4;
     --primary-dark: #232323;
     --primary-grey: #616161;
+    --default-red: #f11919;
 }
 
 h3,
@@ -348,7 +349,6 @@ header.sticky nav {
 
 /* STATISTICS --> START */
 .statistics {
-    background-color: var(--primary-dark);
     padding-top: 4rem;
     padding-bottom: 6rem;
     /* background-image: url('../images/pattern.svg'); */
@@ -393,7 +393,6 @@ header.sticky nav {
     }
 
 }
-
 /* STATISTICS --> END */
 
 
@@ -559,7 +558,6 @@ header.sticky nav {
         }
     }
 }
-
 /*PRCESS STEP ---> END*/
 
 
@@ -600,37 +598,27 @@ header.sticky nav {
 
 
 /* CONTACT ---> START */
-.contact-section {
-    padding: 6rem 0;
+.contact-section, .free-consultation-section{
+    padding: 4rem 0;
 
     h2 {
-        font-size: 2.2rem;
+        font-size: 2.4rem;
         line-height: 3rem;
         color: #0a0a0a;
     }
 
     p {
         font-size: 1rem;
-        max-width: 43.75rem;
         line-height: 2rem;
     }
 
-    .gradient-text {
-        background: linear-gradient(90deg, #0F61D4, #00d4ff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-    }
-
-    a.gradient-text {
-        transition: opacity 0.3s ease;
-
-        &:hover {
-            opacity: 0.8;
-        }
+    .highlighted-text {
+        color: var(--primary-blue);
     }
 
     form {
+        margin-top: 4rem;
+
         .dropdown-toggle {
             border-radius: 0.5rem;
             background-color: #fff;
@@ -653,7 +641,7 @@ header.sticky nav {
 
         .form-control,
         .form-select {
-            border-radius: 0.5rem;
+            border-radius: 0.2rem;
             transition: all 0.3s ease;
 
             &:focus {
@@ -663,9 +651,18 @@ header.sticky nav {
             }
             }
         }
+        
+        input {
+            height: 2.9375rem;
+        }
+        input::placeholder, textarea::placeholder {
+            font-size: 0.8rem;
+            color: var(--primary-grey);
+        }
 
         .invalid-feedback {
-            font-size: 0.875rem;
+            font-size: 0.8rem;
+            color: var(--default-red);
         }
 
         button[type="submit"] {
@@ -699,3 +696,24 @@ header.sticky nav {
 }
 
 /* CONTACT ---> END */
+
+
+
+/* FOOTER ---> START */
+footer {
+    img {
+        width: 12rem;
+    }
+    p {
+        font-size: 0.9rem;
+    }
+    h6 {
+        margin-bottom: 1.7rem;
+    }
+    a, p {
+        margin-bottom: 0.8rem;
+        font-weight: 200;
+        font-size: 0.9rem;
+    }
+}
+/* FOOTER ---> EMD */
