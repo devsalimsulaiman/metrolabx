@@ -47,7 +47,7 @@ header {
 
         .navbar-brand {
             img {
-                height: 2.8rem;
+                height: 2.6rem;
                 width: auto;
             }
         }
@@ -120,7 +120,7 @@ header.sticky nav {
     .carousel,
     .carousel-inner,
     .carousel-item {
-        height: 100%;
+        border-radius: 1rem;
     }
 
     .carousel {
@@ -146,34 +146,65 @@ header.sticky nav {
         }
 
         .carousel-inner {
-            .carousel-caption {
-                bottom: 45%;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
+            position: relative;
 
-                h1 {
-                    font-weight: 600;
-                    width: 70%;
-                    font-size: 2.3rem;
+            .carousel-item {
+                height: 100%;
+                padding: 3rem 1rem;
 
-                    span {
-                        background: linear-gradient(90deg, #0F61D4, #00d4ff);
-                        -webkit-background-clip: text;
-                        -webkit-text-fill-color: transparent;
-                        background-clip: text;
+                .carousel-caption {
+                    position: static; /* just to remove the absolute positioning */
+                    margin-top: 5%;
+                    margin-bottom: 2rem;
+                    text-align: center;
+
+                    h1 {
+                        font-weight: 600;
+                        width: 60%;
+                        margin: 0 auto;
+                        font-size: 2.3rem;
+
+                        span {
+                            background: linear-gradient(90deg, #0F61D4, #00d4ff);
+                            -webkit-background-clip: text;
+                            -webkit-text-fill-color: transparent;
+                            background-clip: text;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.1rem;
+                        width: 80%;
+                        margin: 0 auto;
+                        color: #444;
                     }
                 }
 
-                p {
-                    font-size: 1.1rem;
-                    width: 90%;
+                .carousel-image {
+                    width: 70%;
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+                    transition: transform 0.6s ease, box-shadow 0.6s ease;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        display: block;
+                        border-radius: 1rem;
+                        object-fit: cover;
+                    }
+
+                    &:hover {
+                        transform: scale(1.02);
+                        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+                    }
                 }
             }
         }
     }
-
 }
+
 
 /* HEROES SECTION ---> ENDS */
 
@@ -393,6 +424,7 @@ header.sticky nav {
     }
 
 }
+
 /* STATISTICS --> END */
 
 
@@ -558,6 +590,7 @@ header.sticky nav {
         }
     }
 }
+
 /*PRCESS STEP ---> END*/
 
 
@@ -598,7 +631,8 @@ header.sticky nav {
 
 
 /* CONTACT ---> START */
-.contact-section, .free-consultation-section{
+.contact-section,
+.free-consultation-section {
     padding: 4rem 0;
 
     h2 {
@@ -645,17 +679,19 @@ header.sticky nav {
             transition: all 0.3s ease;
 
             &:focus {
-                 &:focus {
-                border-color: #0074ff;
-                box-shadow: none !important;
-            }
+                &:focus {
+                    border-color: #0074ff;
+                    box-shadow: none !important;
+                }
             }
         }
-        
+
         input {
             height: 2.9375rem;
         }
-        input::placeholder, textarea::placeholder {
+
+        input::placeholder,
+        textarea::placeholder {
             font-size: 0.8rem;
             color: var(--primary-grey);
         }
@@ -704,16 +740,21 @@ footer {
     img {
         width: 12rem;
     }
+
     p {
         font-size: 0.9rem;
     }
+
     h6 {
         margin-bottom: 1.7rem;
     }
-    a, p {
+
+    a,
+    p {
         margin-bottom: 0.8rem;
         font-weight: 200;
         font-size: 0.9rem;
     }
 }
+
 /* FOOTER ---> EMD */
