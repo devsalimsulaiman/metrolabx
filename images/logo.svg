@@ -9,10 +9,14 @@ viewBox="0 0 9942 2261"
    <![CDATA[
     .str0 {stroke:#2A2B2E;stroke-width:28.6917}
     .fil2 {fill:none}
-    .fil0 {fill:#0F61D4;fill-rule:nonzero}
     .fil1 {fill:#2B2B2E;fill-rule:nonzero}
+    .fil0 {fill:url(#id0);fill-rule:nonzero}
    ]]>
   </style>
+  <linearGradient id="id0" gradientUnits="userSpaceOnUse" x1="1449.97" y1="587.216" x2="9941.94" y2="587.216">
+   <stop offset="0" style="stop-color:#0F61D4"/>
+   <stop offset="1" style="stop-color:#00D4FF"/>
+  </linearGradient>
  </defs>
  <g id="Layer_x0020_1">
   <metadata id="CorelCorpID_0Corel-Layer"/>

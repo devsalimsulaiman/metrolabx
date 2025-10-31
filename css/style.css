@@ -309,7 +309,10 @@ header.sticky nav {
         padding: 2rem 0 0 6rem;
 
         h4 {
-            color: var(--primary-blue);
+            background: linear-gradient(90deg, #0F61D4, #00d4ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
             font-size: 1rem;
             font-weight: 700;
             line-height: 2rem;
@@ -640,7 +643,10 @@ header.sticky nav {
     }
 
     .highlighted-text {
-        color: var(--primary-blue);
+        background: linear-gradient(90deg, #0F61D4, #00d4ff);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
     }
 
     form {
