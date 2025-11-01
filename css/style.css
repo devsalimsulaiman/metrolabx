@@ -207,8 +207,6 @@ header.sticky nav {
 .briefing-cards {
     padding-top: 6rem;
     padding-bottom: 6rem;
-    position: relative;
-    z-index: 99999;
 
     .card {
         background-size: 120%;
