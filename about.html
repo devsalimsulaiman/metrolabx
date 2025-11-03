@@ -39,10 +39,24 @@
     <!-- BOOTSTRAP CSS and DEFINED CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="fontawesome/css/all.min.css">
-    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/about.css"/>
+    <link rel="stylesheet" href="aos/aos.css">
 
     <!-- BOOTSTRAP JS -->
     <script src="js/bootstrap.bundle.min.js"></script>
+     <script src="aos/aos.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            AOS.init({
+                // optional settings:
+                once: false,        // do not animate only once
+                duration: 1000,    // default duration
+                easing: 'ease-in-out',
+                offset: 120        // offset (px) from the original trigger point
+            });
+        });
+    </script>
 
 </head>
 
@@ -99,59 +113,41 @@
         <section class="briefing-cards container">
             <div class="row">
 
-                <!-- SOFTWARE SOLUTIONS CARD -->
+                <!-- OUR MISSION CARD -->
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="card card-software py-4 text-center">
                         <div class="card-header bg-transparent border-0">
-                            <img src="images/software-icon.svg" alt="AI Icon" class="software-icon">
+                            <img src="images/leadership.png" alt="AI Icon" class="software-icon">
                             <h6 class="card-title mt-4">Our Mission</h6>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">We create tailored websites, mobile apps, and web apps. With our agile
-                                process, we deliver scalable, secure, and user-friendly applications that streamline
-                                your operations and improve customer experience.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="services.html#software-solutions" class="text-uppercase"><i
-                                    class="fa-solid fa-arrow-right me-1"></i>Learn more</a>
+                            <p class="card-text">To design software, AI-driven solutions, and innovative architectural systems that empower organizations to scale efficiently—merging technology, creativity, and sustainability to transform ideas into impactful realities.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- AI SOLUTIONS CARD -->
+                <!-- OUR VISION CARD -->
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="card card-ai py-4 text-center">
                         <div class="card-header bg-transparent border-0">
-                            <img src="images/ai-icon.svg" alt="AI Icon">
+                            <img src="images/goal.png" alt="AI Icon">
                             <h6 class="card-title mt-4">Our Vision</h6>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Machine-learning and data-driven solutions to
-                                automate workflows, enhance decision-making, and unlock hidden insights. From chatbots
-                                to predictive models, we help you innovate with intelligence.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="services.html#ai-solutions" class="text-primary text-uppercase"><i
-                                    class="fa-solid fa-arrow-right text-primary me-1"></i>Learn more</a>
+                            <p class="card-text">To lead in integrating software, AI solutions, and architectural innovation—shaping smarter businesses, sustainable environments, and a future where technology and design work seamlessly together.</p>
                         </div>
                     </div>
                 </div>
 
-                <!-- ARCHITECTURAL SOLUTIONS CARD -->
+                <!-- THE TEAM CARD -->
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="card card-arch py-4 text-center">
                         <div class="card-header bg-transparent border-0">
-                            <img src="images/architecture-icon.svg" alt="Architecture icon">
-                            <h6 class="card-title mt-4">Summary of Services</h6>
+                            <img src="images/team-building.png" alt="Architecture icon">
+                            <h6 class="card-title mt-4">The Team</h6>
                         </div>
                         <div class="card-body">
-                            <p class="card-text">Our architectural team designs creative, eco-friendly, and functional
-                                spaces. We work closely with you to translate ideas into beautiful, practical designs
-                                that reflect your values and meet your needs.</p>
-                        </div>
-                        <div class="card-footer bg-transparent border-0">
-                            <a href="services.html#architecture-solutions" class="text-uppercase"><i
-                                    class="fa-solid fa-arrow-right me-1"></i>Learn more</a>
+                            <p class="card-text">Comprises of professionals with decades of combined experience across technology, architecture, and design—experts dedicated to delivering excellence in every service we offer, from concept to completion.</p>
                         </div>
                     </div>
                 </div>

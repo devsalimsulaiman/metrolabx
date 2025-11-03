@@ -151,68 +151,56 @@ header.sticky nav {
 /* HEROES SECTION ---> ENDS */
 
 
-/* BRIEFING CARDS SECTION ---> STARTS */
-.briefing-cards {
+/* SERVICES SECTION ---> STARTS */
+.services {
     padding-top: 4rem;
-    padding-bottom: 6rem;
 
     .card {
-        background-size: 120%;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 68vh;
-        background-color: #F9FEFE;
-        background-image: url(/images/bg-curve-white.svg);
         transition: all 0.4s ease-in-out;
         box-shadow: rgba(0, 0, 0, 0.05) 0rem 0.0625rem 0.125rem 0rem;
-
-        .card-header {
-            img {
-                width: 6rem;
-                transition: all 0.4s ease-in-out;
-            }
-
-            .software-icon {
-                width: 6.5rem;
-                transition: all 0.4s ease-in-out;
-            }
-
-            .card-title {
-                font-size: 1.5rem;
-                line-height: 2rem;
-                font-weight: 500;
-            }
-
-        }
-
-        .card-body {
-            padding: 1rem 2.2rem;
-
-            .card-text {
-                line-height: 2rem;
-                font-family: 'Open-sans', sans-serif;
-                font-size: 0.85rem;
-            }
-        }
-
         &:hover {
             transform: scale(1.04);
             border: 0.0625rem solid var(--primary-blue);
+        }
 
-            img {
-                width: 7rem;
-            }
+        .card-head {
+            position: relative;
+            .number-container {
+                display: none;
+                position: absolute;
+                top: 0.5rem;
+                left: 0.5rem;
+                height: max-content;
+                width: max-content;
+                border-radius: 50%;
+                padding: 0.7rem;
+                box-shadow: rgba(0, 0, 0, 0.05) 0rem 0.0625rem 0.125rem 0rem;
+                background: rgba(255, 255, 255, 0.7);
 
-            .software-icon {
-                width: 7.5rem;
+                .number {
+                    font-size: 2.5rem;
+                    font-weight: 900;
+                    color: transparent;
+                    -webkit-text-stroke: 0.0625rem var(--primary-blue);
+                    text-stroke: 0.0625rem var(--primary-blue);
+                }
             }
         }
+        
+         
+        h5 {
+            font-size: 1.2rem;
+            font-family: 'Comfortaa' !important;
+        }
+
+        p {
+            font-size: 0.85rem;
+        }
     }
-
-
 }
 
-/* BRIEFING CARDS SECTION ---> ENDS */
+/* SERVICES SECTION ---> ENDS */
+
 
 
 /*PROCESS STEPS ---> START*/

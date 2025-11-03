@@ -1,20 +1,20 @@
 @font-face {
     font-family: 'Muli';
-    src: url('/fonts/Muli.ttf') format('truetype');
+    src: url('../fonts/Muli.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open-sans';
-    src: url('/fonts/OpenSans-Regular.ttf') format('truetype');
+    src: url('../fonts/OpenSans-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Comfortaa';
-    src: url('/fonts/Comfortaa.ttf') format('truetype');
+    src: url('../fonts/Comfortaa.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -60,25 +60,23 @@ header {
         }
 
         .nav-link {
-            transition: all 0.4s ease-in-out;
+            transition: all 0.2s ease-in-out;
             color: #000000;
             letter-spacing: 0.02em;
             font-family: 'Comfortaa', sans-serif;
             font-size: 0.9rem;
+            border-radius: 0.3rem;
 
             &:hover {
-                border: 0.0625rem solid var(--primary-blue);
-                border-radius: 0.4rem;
-                padding: 0.75rem 3rem !important;
+                padding-left: 1.4rem !important;
+                padding-right: 1.4rem !important;
                 background-color: var(--primary-blue);
                 color: #FFFFFF;
-                font-weight: normal;
             }
         }
 
-.active-link {
+        .active-link {
             color: var(--primary-blue);
-            font-weight: bold;
         }
         
         .navbar-nav {
@@ -268,7 +266,7 @@ header.sticky nav {
         }
 
         &:hover {
-            height: 73vh;
+            transform: scale(1.04);
             border: 0.0625rem solid var(--primary-blue);
 
             img {
@@ -387,10 +385,6 @@ header.sticky nav {
 .statistics {
     padding-top: 4rem;
     padding-bottom: 6rem;
-    /* background-image: url('../images/pattern.svg'); */
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
 
     h3 {
         font-weight: 600;
@@ -604,17 +598,10 @@ header.sticky nav {
 
 /* TRUSTEES ---> START */
 .trusted-section {
-    position: relative;
     color: #fff;
     padding: 6rem 0 !important;
     background: linear-gradient(180deg, #01597A 0%, #0F61D4 100%);
-    overflow: hidden;
-
-    .container {
-        position: relative;
-        z-index: 2;
-    }
-
+    
     h5 {
         font-size: 1.8rem;
         text-transform: capitalize;
