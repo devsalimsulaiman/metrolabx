@@ -163,9 +163,6 @@ header.sticky nav {
         &:hover {
             transform: scale(1.04);
             border: 0.0625rem solid var(--primary-blue);
-            .badge-container {
-                opacity: 1 !important;
-            }
         }
 
         .card-head {
@@ -182,7 +179,6 @@ header.sticky nav {
                 border: 2px solid #FFFFFF;
                 padding: 0.1rem 1rem;
                 background-color: var(--default-red);
-                opacity: 0.8;
             }
         }
         
