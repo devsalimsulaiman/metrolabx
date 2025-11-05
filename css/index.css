@@ -216,10 +216,11 @@ header.sticky nav {
 
 /* BRIEFING CARDS SECTION ---> STARTS */
 .briefing-cards {
-    padding-top: 6rem;
+    padding-top: 8rem;
     padding-bottom: 6rem;
 
     .card {
+        border-radius: 0 !important;
         background-size: 120%;
         background-repeat: no-repeat;
         background-position: center;
@@ -407,6 +408,7 @@ header.sticky nav {
         text-align: left !important;
         background: transparent;
         border: 0.0625rem solid var(--primary-grey);
+        border-radius: 0 !important;
         transition: all 0.4s ease-in-out;
 
         &:hover {
