@@ -29,12 +29,18 @@
     <meta property="og:locale" content="en_US">
 
     <!-- Apple touch icon / favicon -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon"> 
+    <link rel="manifest" href="images/favicon_io/manifest.json"> 
+    <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png"> 
+
+    <link rel="icon" type="image/png" href="images/favicon_io/favicon-16x16.png">
+    <link rel="icon" type="image/png" href="images/favicon_io/favicon-32x32.png">
+
+    <link rel="icon" type="image/png" href="images/favicon_io/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" href="images/favicon_io/android-chrome-512x512.png">
 
     <!-- title-->
-    <title>Metrolabx</title>
+    <title>MetroLabX</title>
 
     <!-- BOOTSTRAP CSS and DEFINED CSS-->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -67,10 +73,10 @@
     <!-- HEADER -->
     <header id="mainHeader" class="sticky">
         <!-- NAV -->
-        <nav class="navbar navbar-expand-lg px-3 shadow-sm" aria-label="Primary navigation">
+        <nav class="navbar navbar-expand-lg px-3" aria-label="Primary navigation">
             <div class="container-fluid">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo.svg" alt="metrolabx">
+                    <img src="images/logo-light.svg" alt="MetroLabX">
                 </a>
 
                 <!-- MOBILE MENU ICON -->
@@ -102,9 +108,10 @@
 
         <!-- SECTION: CAROUSEL AT HEROES -->
         <section class="heroes">
-            <div id="heroesCarousel" class="carousel slide" data-bs-ride="carousel" aria-roledescription="carousel">
+
+            <div id="heroesCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" aria-roledescription="carousel">
                 <!-- Indicators -->
-                <div class="carousel-indicators">
+                <div class="carousel-indicators justify-content-start ms-5" style="margin-bottom: 6rem;">
                     <button type="button" data-bs-target="#heroesCarousel" data-bs-slide-to="0" class="active"
                         aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#heroesCarousel" data-bs-slide-to="1"
@@ -113,58 +120,59 @@
                         aria-label="Slide 3"></button>
                 </div>
 
+
                 <!-- Slides -->
                 <div class="carousel-inner">
+
                     <!-- Slide 1 -->
                     <div class="carousel-item active">
-                        <div class="carousel-caption">
-                            <h1 class="text-black mb-3"><span>Software Solutions</span> to Drive and Maximize Business
+                        <img src="images/software-dev-bg.jpg" alt="software development background picture" class="img-fluid">
+                        <div class="h-100 d-flex flex-column justify-content-center">
+                            <div class="carousel-caption px-5">
+                            <h1 class="mb-3"><span>Software Solutions</span> to Drive & Maximize Business
                                 Efficiency</h1>
-                            <p class="text-secondary">Build reliable, scalable, and secure software applications tailored
+                            <p>Build reliable, scalable, and secure software applications tailored
                                 to your business goals. From web, mobile, and enterprise apps, we deliver custom solutions
                                 that drive business innovation and efficiency.
                             </p>
                         </div>
-                        <div class="carousel-image mx-auto">
-                            <img src="images/coding.jpg" alt="software">
                         </div>
                     </div>
+
+
                     <!-- Slide 2 -->
                     <div class="carousel-item">
-                        <div class="carousel-caption">
-                            <h1 class="text-black mb-3">Integrate Data-driven <span>AI Solutions</span> Into Your
-                                Business</h1>
-                            <p class="text-secondary">Harness the power of Data-driven Artificial Intelligence to
+                        <img src="images/ai-bg.jpg" alt="AI background picture" class="img-fluid">
+                        <div class="h-100 d-flex flex-column justify-content-center">
+                        <div class="carousel-caption px-5">
+                            <h1 class="mb-3">Integrate Data-driven <span>AI Solutions</span> Into Your
+                                Business & Organization</h1>
+                            <p>Harness the power of Data-driven Artificial Intelligence to
                                 transform your processes and intelligent automation to help your business make data-driven
                                 decisions and stay ahead of the competition.
                             </p>
                         </div>
-                        <div class="carousel-image mx-auto">
-                            <img src="images/ai-landing-page.jpg" alt="software">
-                        </div>
                     </div>
+                    </div>
+
                     <!-- Slide 3 -->
                     <div class="carousel-item">
-                        <div class="carousel-caption">
-                            <h1 class="text-black mb-3">Creative <span>Architecture Solutions</span> for Sustainable
+                        <img src="images/architecture-bg.jpg" alt="architectural design background picture" class="img-fluid">
+                        <div class="h-100 d-flex flex-column justify-content-center">
+                            <div class="carousel-caption px-5">
+                            <h1 class="mb-3">Creative <span>Architecture Solutions</span> for Sustainable
                                 Built Environments</h1>
-                            <p class="text-secondary">We design inspiring, sustainable, and functional spaces with blend
+                            <p>We design inspiring, sustainable, and functional spaces with blend
                                 of aesthetics with cutting-edge design principles to bring your vision to life—whether
                                 residential, commercial, or public.
                             </p>
                         </div>
-                        <div class="carousel-image mx-auto">
-                            <img src="images/architecture.jpg" alt="software">
-                        </div>
                     </div>
+                    </div>
+                    
                 </div>
 
                 <!-- Controls -->
-                <button class="carousel-control-prev" type="button" data-bs-target="#heroesCarousel"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#heroesCarousel"
                     data-bs-slide="next">
                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
@@ -182,7 +190,7 @@
                     <div class="card card-software py-4 text-center">
                         <div class="card-header bg-transparent border-0">
                             <img src="images/software-icon.svg" alt="AI Icon" class="software-icon">
-                            <h6 class="card-title mt-4">Software Solutions</h6>
+                            <h6 class="card-title mt-4 highlighted-text">Software Solutions</h6>
                         </div>
                         <div class="card-body">
                             <p class="card-text">We create tailored websites, mobile apps, and web apps. With our agile
@@ -201,7 +209,7 @@
                     <div class="card card-ai py-4 text-center">
                         <div class="card-header bg-transparent border-0">
                             <img src="images/ai-icon.svg" alt="AI Icon">
-                            <h6 class="card-title mt-4">AI Solutions</h6>
+                            <h6 class="card-title mt-4 highlighted-text">AI Solutions</h6>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Machine-learning and data-driven solutions to
@@ -220,7 +228,7 @@
                     <div class="card card-arch py-4 text-center">
                         <div class="card-header bg-transparent border-0">
                             <img src="images/architecture-icon.svg" alt="Architecture icon">
-                            <h6 class="card-title mt-4">Architecture Solutions</h6>
+                            <h6 class="card-title mt-4 highlighted-text">Architecture Solutions</h6>
                         </div>
                         <div class="card-body">
                             <p class="card-text">Our architectural team designs creative, eco-friendly, and functional
@@ -300,7 +308,7 @@
                         “Every living business that embraced innovation was once a business that took the leap of faith
                         towards honouring the tradition of calculated risk.”
                         <p class="text-white d-inline fw-normal">
-                            &mdash; Salim Sulaiman Liman | <span class="fst-italic">Computer Scientist and Writer</span>
+                            &mdash; Salim Sulaiman Liman | <span class="fst-italic">Computer Scientist & Writer</span>
                         </p>
                     </h3>
                 </blockquote>
@@ -718,7 +726,6 @@
                         <h6 class="text-white">Quick Links</h6>
                         <a href="privacy.html" class="text-white d-block">Privacy</a>
                         <a href="terms.html" class="text-white d-block">Terms</a>
-                        <a href="articles.html" class="text-white d-block">Articles</a>
                         <a href="articles.html" class="text-white d-block">Org. Management Software</a>
                         <a href="articles.html" class="text-white d-block">Contents Credits</a>
                     </div>
@@ -727,14 +734,14 @@
                     <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
                         <h6 class="text-white">Contacts</h6>
                         <p class="text-white">
-                            <i class="fa-regular fa-clock me-1"></i>Opening Hours : 24/7 <span
+                            <i class="fa-regular fa-clock me-1"></i>Available: 24/7 <span
                                 class="px-2 text-secondary">|</span> Remotely
                         </p>
                             <a href="tel:"+2348164626581" class="text-white d-block">
                                 <i class="fas fa-phone me-2"></i>+234 81 6462 6581
                             </a>
                         <a href="mailto:info@metrolabx.com" class="text-white d-block">
-                                <i class="fas fa-envelope me-2"></i>info@metrolabx.com
+                                <i class="fas fa-at me-2"></i>info@metrolabx.com
                             </a>
                             <a href="https://instagram.com/metrolabx" class="text-white me-2">
                                 <i class="fab fa-instagram me-2"></i>

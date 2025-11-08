@@ -144,6 +144,8 @@ header.sticky nav {
                     p {
                         font-size: 1rem;
                         width: 70%;
+                        line-height: 1.8rem;
+                        font-family: 'Muli', sans-serif !important;
                     }
 }
 
@@ -387,8 +389,7 @@ header.sticky nav {
 
 
 
-/* CONTACT ---> START */
-.contact-section,
+/* FREE CONSULTATION ---> START */
 .free-consultation-section {
     padding: 4rem 0 5rem 0;
 
@@ -406,21 +407,6 @@ header.sticky nav {
 
     form {
         margin-top: 4rem;
-
-        .dropdown-toggle {
-            border-radius: 0.5rem;
-            background-color: #fff;
-            color: #0a0a0a;
-
-            &:focus {
-                border-color: #0074ff;
-                box-shadow: none !important;
-            }
-        }
-
-        .dropdown-menu {
-            border-radius: 0.5rem;
-        }
 
         .form-label {
             font-weight: 500;
@@ -485,7 +471,7 @@ header.sticky nav {
 
 }
 
-/* CONTACT ---> END */
+/* FREE CONSULTATION ---> END */
 
 
 

@@ -143,8 +143,8 @@ header.sticky nav {
 
                     p {
                         font-size: 1rem;
-                        width: 70%;
                         line-height: 1.8rem;
+                        width: 70%;
                         font-family: 'Muli', sans-serif !important;
                     }
 }
@@ -152,71 +152,6 @@ header.sticky nav {
 
 /* HEROES SECTION ---> ENDS */
 
-
-/* BRIEFING CARDS SECTION ---> STARTS */
-.briefing-cards {
-    padding-top: 4rem;
-    padding-bottom: 6rem;
-
-    .card {
-        border-radius: 0 !important;
-        background-size: 120%;
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 68vh;
-        background-color: #F9FEFE;
-        background-image: url(/images/bg-curve-white.svg);
-        transition: all 0.4s ease-in-out;
-        box-shadow: rgba(0, 0, 0, 0.05) 0rem 0.0625rem 0.125rem 0rem;
-
-        .card-header {
-            img {
-                width: 6rem;
-                transition: all 0.4s ease-in-out;
-            }
-
-            .software-icon {
-                width: 6.5rem;
-                transition: all 0.4s ease-in-out;
-            }
-
-            .card-title {
-                font-size: 1.1rem;
-                line-height: 2rem;
-                font-weight: 500;
-                text-transform: uppercase;
-            }
-
-        }
-
-        .card-body {
-            padding: 0 2.2rem 1rem 2.2rem;
-
-            .card-text {
-                line-height: 2rem;
-                font-family: 'Open-sans', sans-serif;
-                font-size: 0.85rem;
-            }
-        }
-
-        &:hover {
-            transform: scale(1.04);
-            border: 0.0625rem solid var(--primary-blue);
-
-            img {
-                width: 7rem;
-            }
-
-            .software-icon {
-                width: 7.5rem;
-            }
-        }
-    }
-
-
-}
-
-/* BRIEFING CARDS SECTION ---> ENDS */
 
 
 /*PROCESS STEPS ---> START*/
@@ -408,11 +343,14 @@ header.sticky nav {
 
 
 
-/* FREE CONSULTATION ---> START */
-.free-consultation-section {
+/* CONTACT ---> START */
+.contact-section, .free-consultation-section {
     padding: 4rem 0 5rem 0;
 
-    h2 {
+    .quick-contanct-box {
+        transition: all 0.4s ease-in-out;
+        margin-bottom: 2.6rem !important;
+        h2 {
         font-size: 2.4rem;
         line-height: 3rem;
         color: #0a0a0a;
@@ -420,7 +358,20 @@ header.sticky nav {
 
     p {
         font-size: 1rem;
-        line-height: 2rem;
+    }
+
+    i {
+        font-size: 2rem !important;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: var(--primary-blue);
+        color: #FFF !important;
+        a, span {
+            color: #FFF !important;
+        }
+        }   
     }
 
 
@@ -490,7 +441,7 @@ header.sticky nav {
 
 }
 
-/* FREE CONSULTATION ---> END */
+/* CONTACT ---> END */
 
 
 

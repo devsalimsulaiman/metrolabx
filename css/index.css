@@ -1,3 +1,10 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    hyphens: auto;
+}
+
 @font-face {
     font-family: 'Muli';
     src: url('../fonts/Muli.ttf') format('truetype');
@@ -47,11 +54,13 @@ a {
 
 /* HEADER ---> STARTS */
 header {
-    nav {
-        height: 6rem;
-        background-color: white;
-        transition: all 0.3s ease-in-out;
+  
 
+    nav {
+        height: 5rem;
+        background: rgba(0, 0, 0, 0.1);
+        transition: all 0.4s ease-in-out;
+        backdrop-filter: blur(4px);
         .navbar-brand {
             img {
                 height: 2.6rem;
@@ -61,7 +70,7 @@ header {
 
         .nav-link {
             transition: all 0.2s ease-in-out;
-            color: #000000;
+            color: #FFFFFF;
             letter-spacing: 0.02em;
             font-family: 'Comfortaa', sans-serif;
             font-size: 0.9rem;
@@ -70,13 +79,14 @@ header {
             &:hover {
                 padding-left: 1.4rem !important;
                 padding-right: 1.4rem !important;
-                background-color: var(--primary-blue);
-                color: #FFFFFF;
+                background-color: #FFFFFF;
+                color: var(--primary-blue);
             }
         }
 
         .active-link {
-            color: var(--primary-blue);
+            /*color: var(--primary-blue);*/
+            font-weight: bold;
         }
         
         .navbar-nav {
@@ -85,9 +95,17 @@ header {
 
     }
 
+    &.scrolled nav {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75));
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease-in-out;
+    /*backdrop-filter: none;*/
+  }
+
     .free-consultation-btn {
         background-color: transparent;
-        border: 0.0625rem solid var(--primary-blue);
+        border: 0.0625rem solid #FFFFFF;
+        color: #FFFFFF;
         padding: 0.75rem 1.5rem;
         border-radius: 0.5rem;
         font-family: 'Comfortaa', sans-serif;
@@ -97,7 +115,7 @@ header {
         /* On hover */
         &:hover {
             background-color: var(--primary-blue);
-            border: 0.0625rem solid #FFFFFF;
+            border: none;
             color: #FFFFFF;
         }
     }
@@ -128,7 +146,7 @@ header.sticky nav {
 .heroes {
     height: 100vh;
     overflow: hidden;
-
+background: transparent;
     .carousel,
     .carousel-inner,
     .carousel-item {
@@ -136,16 +154,7 @@ header.sticky nav {
     }
 
     .carousel {
-        .carousel-control-prev-icon {
-            background-image: url('../images/prev-icon.svg');
-            width: 1.2rem;
-        }
-
-        .carousel-control-next-icon {
-            background-image: url('../images/next-icon.svg');
-            width: 1.2rem;
-        }
-
+    
         .carousel-control-next {
             padding-right: 3%;
         }
@@ -159,53 +168,74 @@ header.sticky nav {
             width: fit-content;
         }
 
+
+
         .carousel-inner {
-            position: relative;
+  position: relative;
 
-            .carousel-item {
-                height: 100%;
+  .carousel-item {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
 
-                .carousel-caption {
-                    position: static;
-                    /* just to remove the absolute positioning */
-                    margin-top: 10%;
-                    margin-bottom: 1rem;
-                    text-align: center;
+    /*the overlay*/
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 10, 0.5);
+      z-index: 1;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+
+    .carousel-caption {
+      position: relative;
+      z-index: 2; 
+    }
+    .carousel-caption {
+                    position: static; /* just to remove the absolute positioning */
+                    text-align: left;
 
                     h1 {
-                        font-weight: 600;
-                        width: 60%;
-                        margin: 0 auto;
-                        font-size: 2.3rem;
+                        font-weight: 900;
+                        width: 80%;
+                        font-size: 3rem;
+                        color: #FFFFFF;
+                        font-family: 'Comfortaa', sans-serif !important;
 
                         span {
                             background: linear-gradient(90deg, #0F61D4, #00d4ff);
                             -webkit-background-clip: text;
                             -webkit-text-fill-color: transparent;
                             background-clip: text;
+                            letter-spacing: 1px;
+                            font-size: 3.3rem;
                         }
                     }
 
                     p {
-                        font-size: 1.1rem;
-                        width: 65%;
-                        margin: 0 auto;
-                        color: #444;
+                        font-size: 1.5rem;
+                        width: 80%;
+                        color: #FFFFFF;
+                        line-height: 2.5rem;
                     }
                 }
+  }
+}
 
-                .carousel-image {
-                    width: 85%;
-                    height: 48vh;
-                    border-radius: 1rem;
-                    overflow: hidden;
-
-                    img {
-                        width: 100%;
-                    }
-                }
-            }
-        }
     }
 }
 
@@ -242,15 +272,16 @@ header.sticky nav {
             }
 
             .card-title {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
                 line-height: 2rem;
                 font-weight: 500;
+                text-transform: uppercase;
             }
 
         }
 
         .card-body {
-            padding: 1rem 2.2rem;
+            padding: 0 2.2rem 1rem 2.2rem;
 
             .card-text {
                 line-height: 2rem;
@@ -626,7 +657,6 @@ header.sticky nav {
 
 
 /* CONTACT ---> START */
-.contact-section,
 .free-consultation-section {
     padding: 4rem 0 5rem 0;
 
@@ -643,22 +673,7 @@ header.sticky nav {
 
 
     form {
-        margin-top: 4rem;
-
-        .dropdown-toggle {
-            border-radius: 0.5rem;
-            background-color: #fff;
-            color: #0a0a0a;
-
-            &:focus {
-                border-color: #0074ff;
-                box-shadow: none !important;
-            }
-        }
-
-        .dropdown-menu {
-            border-radius: 0.5rem;
-        }
+        margin-top: 4rem; 
 
         .form-label {
             font-weight: 500;

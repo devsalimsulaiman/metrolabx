@@ -105,3 +105,15 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+
+// header toggling class
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('mainHeader');
+  
+  if (window.scrollY > 80) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+});
