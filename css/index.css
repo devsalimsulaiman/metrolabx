@@ -146,12 +146,7 @@ header.sticky nav {
 .heroes {
     height: 100vh;
     overflow: hidden;
-background: transparent;
-    .carousel,
-    .carousel-inner,
-    .carousel-item {
-        border-radius: 1rem;
-    }
+background: transparent; 
 
     .carousel {
     
@@ -163,7 +158,6 @@ background: transparent;
             padding-left: 3%;
         }
 
-        .carousel-control-prev,
         .carousel-control-next {
             width: fit-content;
         }
@@ -254,9 +248,9 @@ background: transparent;
         background-size: 120%;
         background-repeat: no-repeat;
         background-position: center;
-        height: 70vh;
+        height: max-content;
         background-color: #F9FEFE;
-        background-image: url(/images/bg-curve-white.svg);
+        background-image: url('../images/bg-curve-white.svg');
         transition: all 0.4s ease-in-out;
         box-shadow: rgba(0, 0, 0, 0.05) 0rem 0.0625rem 0.125rem 0rem;
 
