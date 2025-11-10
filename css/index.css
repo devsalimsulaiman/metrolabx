@@ -229,7 +229,6 @@ background: transparent;
 
                     p {
                         font-size: 1.5rem;
-                        width: 70%;
                         color: #FFFFFF;
                         line-height: 2.5rem;
                     }
@@ -249,7 +248,26 @@ background: transparent;
 .briefing-cards {
     padding-top: 8rem;
     padding-bottom: 6rem;
+h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 2rem;
+        }
 
+        h5 {
+            font-size: 2.1rem;
+            font-weight: 800;
+            color: var(--primary-dark);
+            letter-spacing: -0.06rem;
+            -webkit-text-stroke-width: 0.0625rem;
+            -webkit-text-stroke-color: var(--primary-dark);
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 2rem;
+            color: var(--primary-grey);
+        }
     .card {
         border-radius: 0 !important;
         background-size: 120%;
@@ -721,7 +739,6 @@ background: transparent;
             /* On hover */
             &:hover {
                 background-color: var(--primary-blue);
-                border: 0.0625rem solid #FFFFFF;
                 color: #FFFFFF;
             }
 
