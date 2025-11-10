@@ -7,13 +7,11 @@
 
 
 
-/* Optional: enable smooth snapping effect for modern browsers */
 html {
-  scroll-behavior: smooth;
-  scroll-snap-type: y mandatory;
-  scrollbar-width: thin;
- }
- 
+    scroll-behavior: smooth;
+    scrollbar-width: thin;
+}
+
 
 
 @font-face {
@@ -168,13 +166,13 @@ header.sticky nav {
     height: 100vh;
     overflow: hidden;
     background: transparent;
-      scroll-snap-align: start;
-
 
     .carousel {
         height: 100%;
+
         .carousel-inner {
             height: 100%;
+
             .carousel-item {
                 position: relative;
                 height: 100%;
@@ -227,6 +225,7 @@ header.sticky nav {
                         font-size: 1.5rem;
                         color: #fff;
                         line-height: 2.5rem;
+                        width: 70%;
                     }
                 }
             }
@@ -245,6 +244,7 @@ header.sticky nav {
     .carousel-indicators {
         margin-bottom: 10rem;
     }
+
     .trustees {
         position: absolute;
         bottom: 0;
@@ -281,8 +281,7 @@ header.sticky nav {
 /* BRIEFING CARDS SECTION ---> STARTS */
 .briefing-cards {
     position: relative;
-   scroll-snap-align: start;
-  padding: 6rem 0;
+    padding: 6rem 0;
 
     h4 {
         font-size: 1rem;
