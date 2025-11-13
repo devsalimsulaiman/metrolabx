@@ -280,12 +280,13 @@ header.sticky nav {
         animation: scroll 35s linear infinite;
 
         img {
-          width: 5rem;
+          width: 3.5rem;
           opacity: 0.4;
-          transition: opacity 0.3s ease;
+          transition: all 0.4s ease-in-out;
 
           &:hover {
             opacity: 1;
+            transform: scale(1.4);
           }
         }
       }
