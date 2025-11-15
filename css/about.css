@@ -73,7 +73,7 @@ header {
 
         .navbar-brand {
             img {
-                height: 2.6rem;
+                height: 2.8rem;
                 width: auto;
             }
         }
@@ -200,12 +200,6 @@ header.sticky nav {
                 width: 6rem;
                 transition: all 0.4s ease-in-out;
             }
-
-            .software-icon {
-                width: 6.5rem;
-                transition: all 0.4s ease-in-out;
-            }
-
             .card-title {
                 font-size: 1rem;
                 line-height: 2rem;
@@ -229,13 +223,7 @@ header.sticky nav {
             transform: scale(1.04);
             border: 0.0625rem solid var(--primary-blue);
 
-            img {
-                width: 7rem;
-            }
-
-            .software-icon {
-                width: 7.5rem;
-            }
+            
         }
     }
 
