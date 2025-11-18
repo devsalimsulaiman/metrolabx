@@ -236,16 +236,13 @@ header.sticky nav {
             width: fit-content;
         }
 
-        .carousel-control-prev {
-            padding-left: 3%;
-        }
     }
 
     .carousel-indicators {
         margin-bottom: 10rem;
     }
 
-    /* ✅ Trusted-by section with the working animation */
+    /*  Trusted-by section with the working animation */
     .trusted-by {
         position: absolute;
         bottom: 0;
@@ -390,8 +387,6 @@ header.sticky nav {
             }
         }
     }
-
-
 }
 
 /* BRIEFING CARDS SECTION ---> ENDS */
@@ -486,8 +481,6 @@ header.sticky nav {
                 color: #FFFFFF;
             }
         }
-
-
     }
 }
 
@@ -652,10 +645,22 @@ header.sticky nav {
     padding: 4rem 0 !important;
     background: linear-gradient(90deg, #01597A 0%, #0F61D4 100%);
 
+    h4 {
+        font-size: 1rem;
+        font-weight: 700;
+        line-height: 2rem;
+    }
+
     h5 {
         font-size: 2.1rem;
         font-weight: 800;
         letter-spacing: -0.06rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 2rem;
+        color: var(--primary-grey);
     }
 
     img {
@@ -678,7 +683,7 @@ header.sticky nav {
 .free-consultation-section {
     padding: 6rem 0;
 
-       h4 {
+    h4 {
         font-size: 1rem;
         font-weight: 700;
         line-height: 2rem;
@@ -793,3 +798,321 @@ footer {
 }
 
 /* FOOTER ---> EMD */
+
+
+
+
+/* MEDIA QUERY FOR MOBILE */
+@media (max-width: 600px) {
+    footer {
+        img {
+            display: none;
+        }
+
+        h6 {
+            margin-bottom: 1rem;
+        }
+
+        .mobile-padding-top-none {
+            padding-top: 0 !important;
+        }
+
+        p,
+        a {
+            font-size: 0.8rem;
+        }
+
+        .commitment {
+            padding-left: 1rem !important;
+            margin-bottom: 1.5rem;
+        }
+
+        .quick-links {
+            padding-left: 1rem !important;
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    .free-consultation-section,
+    .interests {
+        padding: 4rem 0;
+
+        h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 2rem;
+        }
+
+        h5 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            margin-bottom: 1rem !important;
+        }
+
+        p {
+            font-size: 0.9rem !important;
+            line-height: 1.6rem;
+            margin-bottom: 0 !important;
+        }
+
+        label {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+        }
+
+        button {
+            margin-top: 2rem;
+            font-size: 0.9rem !important;
+        }
+
+        form {
+            margin-top: 2rem;
+        }
+
+        .accordion-item {
+            margin: 0.1rem 0 !important;
+        }
+    }
+
+    .trusted-section {
+        h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 2rem;
+        }
+
+        h5 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            width: 90%;
+            margin-bottom: 1rem !important;
+        }
+
+        p {
+            font-size: 0.9rem !important;
+            line-height: 1.6rem;
+        }
+
+        img {
+            width: 45%;
+        }
+    }
+
+    .statistics {
+        padding: 4rem 1rem;
+
+        h3 {
+            font-weight: 500;
+            font-size: 1.8rem;
+            width: 100%;
+            line-height: 2.3rem;
+        }
+
+        .author {
+            margin-top: 1rem;
+            display: block !important;
+            font-size: 0.8rem;
+        }
+
+        p {
+            font-size: 0.85rem;
+        }
+
+        p {
+            display: block !important;
+        }
+
+        .card-container {
+            width: 100% !important;
+        }
+
+        .card {
+            text-align: left !important;
+
+            &:hover {
+                transform: scale(1.01);
+            }
+
+            .counter {
+                font-size: 3rem;
+                font-weight: 900;
+            }
+
+        }
+    }
+
+    .our-software {
+        padding: 4rem 0;
+        padding-top: 0;
+
+        .row {
+            flex-direction: column-reverse;
+        }
+
+        .software-snapshots {
+            padding: 2rem 2rem 4rem 2rem !important;
+            background: #FFF !important;
+
+            img {
+                width: 90%;
+                transition: all 0.4s ease-in-out;
+
+                &:hover {
+                    width: 100%;
+                }
+            }
+
+            #first-img {
+                margin-bottom: -18%;
+            }
+
+            #second-img {
+                margin-left: 0;
+            }
+
+            #third-img {
+                margin-top: -20%;
+            }
+        }
+
+        .software-summary {
+            padding: 2rem;
+
+            h4 {
+                font-size: 0.9rem;
+            }
+
+            h5 {
+                font-size: 1.8rem;
+                font-weight: 500;
+            }
+
+            p {
+                font-size: 0.9rem;
+                line-height: 1.6rem;
+            }
+
+            .perks {
+                i {
+                    font-size: 1rem;
+                }
+
+                h6 {
+                    font-weight: 500;
+                    line-height: 1.8rem;
+                }
+
+                p {
+                    font-size: 0.9rem;
+                }
+            }
+        }
+    }
+
+    .briefing-cards {
+        padding: 4rem 0;
+
+        h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 2rem;
+        }
+
+        h5 {
+            font-size: 1.8rem;
+            font-weight: 500;
+            width: 90%;
+            margin-bottom: 1rem !important;
+        }
+
+        p {
+            font-size: 0.9rem !important;
+            line-height: 1.5rem;
+        }
+
+        .card {
+            background-size: 90%;
+            margin-bottom: 2rem;
+
+            .card-header {
+                img {
+                    width: 4rem;
+                    transition: none;
+                }
+
+                .software-icon {
+                    width: 5rem;
+                    transition: none;
+                }
+
+                .card-title {
+                    font-size: 1rem;
+                    line-height: 2rem;
+                }
+
+            }
+
+            &:hover {
+                transform: none;
+                border: 0.0625rem solid var(--primary-blue);
+
+                img {
+                    width: 4rem;
+                }
+
+                .software-icon {
+                    width: 5rem;
+                }
+            }
+        }
+    }
+
+    .heroes {
+
+    .carousel {
+
+        .carousel-inner {
+
+            .carousel-item {
+                .carousel-caption {
+                    padding: 1rem !important;
+
+                    h1 {
+                        font-weight: 600;
+                        width: 100%;
+                        font-size: 2.5rem;
+                        margin-top: -6rem !important;
+
+                        span {
+                            font-size: 2.5rem;
+                        }
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        line-height: 1.6rem;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel-indicators {
+        margin-bottom: 8rem;
+        margin-left: 1rem !important;
+    }
+
+    /*  Trusted-by section with the working animation */
+    .trusted-by {
+        padding: 1rem !important;
+
+        img {
+                    width: 3rem !important; 
+                }
+    }
+}
+
+}
+
+/* END MEDIA QUERY FOR MOBILE */

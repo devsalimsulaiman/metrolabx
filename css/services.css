@@ -339,3 +339,33 @@ footer {
 }
 
 /* FOOTER ---> EMD */
+
+
+/* MEDIA QUERY FOR MOBILE */
+@media (max-width: 600px) {
+    footer {
+        img {
+            display: none;
+        }
+
+        h6 {
+            margin-bottom: 1rem;
+        }
+
+        .mobile-padding-top-none {
+            padding-top: 0 !important;
+        }
+
+        p, a {
+            font-size: 0.8rem;
+        }
+        .commitment {
+            padding-left: 1rem !important;
+            margin-bottom: 1.5rem;
+        }
+        .quick-links {
+            padding-left: 1rem !important;
+            margin-bottom: 1.5rem;
+        }
+    }
+}
