@@ -1076,7 +1076,7 @@ footer {
     }
 
     .heroes {
-    height: 103vh !important;
+    height: 101vh !important;
 
         .carousel {
 
@@ -1110,7 +1110,7 @@ footer {
         }
 
         .carousel-indicators {
-            margin-bottom: 8rem;
+            margin-bottom: 14rem;
             margin-left: 1rem !important;
         }
 
@@ -1142,12 +1142,6 @@ footer {
 
         }
     }
-    
-header.sticky nav {
-    top: 20;
-}
-    
-
 }
 
 /* END MEDIA QUERY FOR MOBILE */
