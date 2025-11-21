@@ -1075,7 +1075,7 @@ footer {
     }
 
     .heroes {
-    height: 104dvh !important;
+    height: 103vh !important;
 
         .carousel {
 
@@ -1141,6 +1141,10 @@ footer {
 
         }
     }
+    
+header.sticky nav {
+    top: 0;
+}
     
 
 }
