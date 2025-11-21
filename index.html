@@ -60,15 +60,15 @@
     <header id="mainHeader" class="sticky">
         <!-- NAV -->
         <nav class="navbar navbar-expand-lg px-3" aria-label="Primary navigation">
-            <div class="container-fluid">
+            <div class="container-fluid mobile-nav-container">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo-light.svg" alt="MetroLabX">
                 </a>
                 <!-- MOBILE MENU ICON -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu"
+                data-bs-scroll="false">
+                menu</button>
+
                 <!-- LINKS TO OTHER PAGES -->
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav mx-auto">
@@ -687,6 +687,30 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- MOBILE MENU OFFCANVAS -->
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="sideMenu" aria-labelledby="sideMenuLabel" data-bs-backdrop="true">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="sideMenuLabel">Offcanvas</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>
+    <div class="dropdown mt-3">
+      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+        Dropdown button
+      </button>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 </body>
 

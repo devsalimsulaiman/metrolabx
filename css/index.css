@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    hyphens: auto;
+    /*hyphens: auto;*/
 }
 
 
@@ -10,6 +10,7 @@
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
+    overflow-x: hidden;
 }
 
 
@@ -338,7 +339,7 @@ header.sticky nav {
         background-size: 120%;
         background-repeat: no-repeat;
         background-position: center;
-        height: max-content;
+        height: 60vh;
         background-color: #F9FEFE;
         background-image: url('../images/bg-curve-white.svg');
         transition: all 0.4s ease-in-out;
@@ -800,6 +801,11 @@ footer {
 /* FOOTER ---> EMD */
 
 
+/*OFFCANVAS CONTROL*/
+.no-scroll {
+    overflow: hidden !important;
+    touch-action: none;
+}
 
 
 /* MEDIA QUERY FOR MOBILE */
@@ -1033,6 +1039,7 @@ footer {
         .card {
             background-size: 90%;
             margin-bottom: 2rem;
+            height: max-content;
 
             .card-header {
                 img {
@@ -1069,49 +1076,70 @@ footer {
 
     .heroes {
 
-    .carousel {
+        .carousel {
 
-        .carousel-inner {
+            .carousel-inner {
 
-            .carousel-item {
-                .carousel-caption {
-                    padding: 1rem !important;
+                .carousel-item {
+                    .carousel-caption {
+                        padding: 1rem !important;
 
-                    h1 {
-                        font-weight: 600;
-                        width: 100%;
-                        font-size: 2.5rem;
-                        margin-top: -6rem !important;
+                        h1 {
+                            font-weight: 600;
+                            width: 100%;
+                            font-size: 2.2rem;
+                            margin-top: -6rem !important;
 
-                        span {
-                            font-size: 2.5rem;
+                            span {
+                                font-size: 2.2rem;
+                            }
                         }
-                    }
 
-                    p {
-                        font-size: 1.2rem;
-                        line-height: 1.6rem;
-                        width: 100%;
+                        p {
+                            font-size: 1.1rem;
+                            line-height: 1.6rem;
+                            width: 80%;
+                            word-break: normal !important;
+                            overflow-wrap: break-word !important;
+                        }
                     }
                 }
             }
         }
+
+        .carousel-indicators {
+            margin-bottom: 8rem;
+            margin-left: 1rem !important;
+        }
+
+        /*  Trusted-by section with the working animation */
+        .trusted-by {
+            padding: 1rem !important;
+
+            img {
+                width: 3rem !important;
+            }
+        }
     }
 
-    .carousel-indicators {
-        margin-bottom: 8rem;
-        margin-left: 1rem !important;
-    }
+    header {
 
-    /*  Trusted-by section with the working animation */
-    .trusted-by {
-        padding: 1rem !important;
+        nav {
+            height: 4rem;
 
-        img {
-                    width: 3rem !important; 
+            .mobile-nav-container {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+
+            .navbar-brand {
+                img {
+                    height: 2.2rem;
                 }
+            }
+
+        }
     }
-}
 
 }
 

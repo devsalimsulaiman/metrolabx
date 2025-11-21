@@ -117,3 +117,14 @@ window.addEventListener('scroll', () => {
     header.classList.remove('scrolled');
   }
 });
+
+
+
+// offcanvas
+const offcanvas = document.getElementById('sideMenu');
+offcanvas.addEventListener('shown.bs.offcanvas', () => {
+  document.body.classList.add('no-scroll');
+})
+offcanvas.addEventListener('hidden.bs.offcanvas', () => {
+  document.body.classList.remove('no-scroll');
+})
