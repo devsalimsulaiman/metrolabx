@@ -129,8 +129,3 @@ offcanvas.addEventListener('hidden.bs.offcanvas', () => {
   document.body.classList.remove('no-scroll');
 })
 
-
-// header nav for mobile to stick well
-window.addEventListener("scroll", () => {
-    header.classList.toggle("sticky", window.scrollY > 0);
-});
