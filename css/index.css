@@ -1152,6 +1152,18 @@ footer {
         }
     }
 
+    header {
+    position: relative;
+}
+
+header.sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
       header.sticky nav {
         animation: none !important;
         transform: translateY(0) !important;
