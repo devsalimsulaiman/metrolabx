@@ -1136,7 +1136,7 @@ footer {
 
             .navbar-brand {
                 img {
-                    height: 2.2rem;
+                    height: 2rem;
                 }
             }
 
@@ -1144,7 +1144,7 @@ footer {
     }
     
 header.sticky nav {
-    top: 0;
+    top: 20;
 }
     
 
