@@ -10,10 +10,11 @@
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    overflow-x: hidden;
 }
 
-
+body {
+    overflow-x: hidden;
+}
 
 @font-face {
     font-family: 'Muli';
@@ -1100,6 +1101,7 @@ footer {
                         }
 
                         p {
+                            display: none;
                             font-size: 1.1rem;
                             line-height: 1.6rem;
                             width: 80%;
