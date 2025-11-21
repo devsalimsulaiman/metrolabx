@@ -1142,6 +1142,15 @@ footer {
 
         }
     }
+    @keyframes slideDown {
+    from {
+        transform: none !important;
+    }
+
+    to {
+        transform: none !important;
+    }
+}
 }
 
 /* END MEDIA QUERY FOR MOBILE */
