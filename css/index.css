@@ -272,7 +272,7 @@ header.sticky nav {
             .logo-track {
                 display: flex;
                 align-items: center;
-                gap: 3rem;
+                gap: 2rem;
                 width: max-content;
                 animation: scroll 35s linear infinite;
 
@@ -1075,6 +1075,7 @@ footer {
     }
 
     .heroes {
+    height: 104dvh !important;
 
         .carousel {
 
@@ -1140,6 +1141,7 @@ footer {
 
         }
     }
+    
 
 }
 
