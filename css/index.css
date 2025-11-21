@@ -144,20 +144,24 @@ header {
 header.sticky nav {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     z-index: 1000;
     animation: slideDown 0.3s ease-in-out;
+    transform: translateY(0) !important;
 }
+
 
 @keyframes slideDown {
     from {
-        transform: translateY(-50%);
+        transform: translateY(-100%);
     }
 
     to {
         transform: translateY(0);
     }
 }
+
 
 /* HEADER ---> ENDS */
 
@@ -166,7 +170,8 @@ header.sticky nav {
 .heroes {
     position: relative;
     height: 100vh;
-    height: 100dvh; /* Mobile fix */
+    height: 100dvh;
+    /* Mobile fix */
     overflow: hidden;
     background: transparent;
 
@@ -1078,8 +1083,9 @@ footer {
     }
 
     .heroes {
-    height: 100vh;
-    height: 100dvh; /* Mobile fix */
+        height: 100vh;
+        height: 100dvh;
+        /* Mobile fix */
 
         .carousel {
 
@@ -1146,15 +1152,11 @@ footer {
 
         }
     }
-    @keyframes slideDown {
-    from {
-        transform: none !important;
-    }
 
-    to {
-        transform: none !important;
+      header.sticky nav {
+        animation: none !important;
+        transform: translateY(0) !important;
     }
-}
 }
 
 /* END MEDIA QUERY FOR MOBILE */
