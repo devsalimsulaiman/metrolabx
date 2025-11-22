@@ -16,6 +16,9 @@ body {
     overflow-x: hidden;
 }
 
+section {
+    overflow-x: hidden !important;
+}
 @font-face {
     font-family: 'Muli';
     src: url('../fonts/Muli.ttf') format('truetype');
