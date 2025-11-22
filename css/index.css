@@ -18,6 +18,7 @@ body {
 
 section {
     overflow-x: hidden !important;
+    width: 100vw !important;
 }
 @font-face {
     font-family: 'Muli';
