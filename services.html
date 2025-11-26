@@ -49,21 +49,18 @@
 
 <body>
 
-    <!-- HEADER -->
+  <!-- HEADER -->
     <header id="mainHeader" class="sticky">
         <!-- NAV -->
-        <nav class="navbar navbar-expand-lg px-3 shadow-sm" aria-label="Primary navigation">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg px-3" aria-label="Primary navigation">
+            <div class="container-fluid mobile-nav-container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo-light.svg" alt="metrolabx">
+                    <img src="images/logo-light.svg" alt="MetroLabX">
                 </a>
-
                 <!-- MOBILE MENU ICON -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
+                <button class="btn btn-primary menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu"
+                data-bs-scroll="false">
+                menu</button>
 
                 <!-- LINKS TO OTHER PAGES -->
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -218,34 +215,29 @@
             </div>
         </section>
 
-        <!-- FREE CONSULTATION SECTION -->
+         <!-- FREE CONSULTATION SECTION -->
         <section class="free-consultation-section bg-light" id="free-consultation">
-            <div class="container mt-4">
-                <h2 class="fw-bold text-center">
-                    <span class="highlighted-text">Book Free Consultation</span>
-                </h2>
-                <p class="mt-3 text-secondary text-center fw-semibold">
-                    We will get back to you within 24-hours with <span class="highlighted-text">free online
-                        session</span> booked just for you.
-                </p>
-
+            <div class="container">
+                <div class="text-center">
+                    <h4 class="mb-1 highlighted-text">Free Consultation</h4>
+                    <h5 class="mb-4">Book Your Space Now</h5>
+                    <p class="mb-5">We will get back to you within 24-hours with free online session booked just for
+                        you.</p>
+                </div>
                 <form id="contactForm" novalidate>
                     <div class="row align-items-end">
-
                         <!-- Name -->
                         <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                             <label for="name" class="form-label">Your Name</label>
                             <input type="text" class="form-control" id="name" placeholder="Enter your name" required>
                             <div class="invalid-feedback">Please enter your name.</div>
                         </div>
-
                         <!-- Email -->
                         <div class="col-xxl-5 col-xl-5 col-lg-5 col-md-6 col-sm-12">
                             <label for="email" class="form-label">Your Email</label>
                             <input type="email" class="form-control" id="email" placeholder="address@mail.com" required>
                             <div class="invalid-feedback">Please enter a valid email address.</div>
                         </div>
-
                         <!-- Book / Submit -->
                         <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
                             <button type="submit" class="w-100" disabled>

@@ -75,6 +75,12 @@ a {
     background-clip: text;
 }
 
+
+.menu-btn {
+    display: none;
+}
+
+
 /* HEADER ---> STARTS */
 header {
 
@@ -349,7 +355,7 @@ header.sticky nav {
         background-size: 120%;
         background-repeat: no-repeat;
         background-position: center;
-        height: 60vh;
+        height: max-content
         background-color: #F9FEFE;
         background-image: url('../images/bg-curve-white.svg');
         transition: all 0.4s ease-in-out;
@@ -820,6 +826,17 @@ footer {
 
 /* MEDIA QUERY FOR MOBILE */
 @media (max-width: 600px) {
+
+
+.menu-btn {
+    display: block;
+}
+
+ label {
+        font-size: 0.8rem;
+    }
+
+
     footer {
         img {
             display: none;
@@ -852,7 +869,7 @@ footer {
 
     .free-consultation-section,
     .interests {
-        padding: 4rem 0;
+        padding: 4rem 0.8rem 4rem 0;
 
         h4 {
             font-size: 1rem;
@@ -1027,7 +1044,7 @@ footer {
     }
 
     .briefing-cards {
-        padding: 4rem 0;
+        padding: 4rem 1.8rem 4rem 1.1rem;
 
         h4 {
             font-size: 1rem;
