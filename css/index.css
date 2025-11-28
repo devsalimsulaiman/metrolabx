@@ -898,6 +898,9 @@ footer {
     }
 
     .trusted-section {
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+
         h4 {
             font-size: 1rem;
             font-weight: 700;
@@ -907,17 +910,15 @@ footer {
         h5 {
             font-size: 1.8rem;
             font-weight: 500;
-            width: 90%;
             margin-bottom: 1rem !important;
         }
 
         p {
-            font-size: 0.9rem !important;
-            line-height: 1.6rem;
+           display: none;
         }
 
         img {
-            width: 45%;
+            width: 30%;
         }
     }
 
@@ -927,7 +928,7 @@ footer {
         h3 {
             font-weight: 500;
             font-size: 1.5rem;
-            width: 100%;
+            width: 100% !important;
             line-height: 2.2rem;
         }
 
@@ -973,12 +974,14 @@ footer {
         }
 
         .software-snapshots {
-            padding: 1rem !important;
+            padding-left: 1rem !important;
+            width: 100% !important;
+            display: flex;
+            background: red !important;
             background: #FFF !important;
 
             img {
-                width: 90%;
-                transition: all 0.4s ease-in-out;
+                width: 100%;
 
                 &:hover {
                     width: 100%;
@@ -1057,7 +1060,7 @@ footer {
             background-size: 90%;
             margin-bottom: 2rem;
             height: max-content;
-            padding: 1rem !important;
+            padding: 0.5rem !important;
 
             .card-header {
                 img {
@@ -1095,7 +1098,6 @@ footer {
     .heroes {
         height: 100vh;
         height: 100dvh;
-        /* Mobile fix */
 
         .carousel {
 
@@ -1108,11 +1110,11 @@ footer {
                         h1 {
                             font-weight: 600;
                             width: 100%;
-                            font-size: 1.8rem !important;
+                            font-size: 1.9rem !important;
                             margin-top: -7rem !important;
 
                             span {
-                                font-size: 1.8rem;
+                                font-size: 1.9rem !important;
                             }
                         }
 
