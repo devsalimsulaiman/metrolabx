@@ -917,6 +917,9 @@ footer {
         img {
             width: 30%;
         }
+        p {
+            display: none;
+        }
     }
 
     .statistics {
