@@ -120,58 +120,57 @@ window.addEventListener('scroll', () => {
 
 
 
+// MOBILE MENU
+const menuToggle = document.getElementById('menu-toggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const closeMenu = document.getElementById('close-menu');
+const mobileOverlay = document.getElementById('mobileOverlay');
+const menuLinks = document.querySelectorAll('.mobile-menu-links a');
+const freeBtn = document.querySelector('.mobile-free-consultation');
 
-/**
- * script.js
- * Handles responsive navigation menu toggling and smooth scrolling for internal page links.
- *
- * Features:
- * 1. Mobile menu toggle (open/close on click)
- * 2. Locks body scroll when menu is open
- * 3. Smooth scrolling to anchor links (#about, #projects, etc.)
- * 4. Auto-close menu when a navigation link is clicked
- *
- * Author: Salim Sulaiman Liman
- * Year: 2025
- */
+function openMenu() {
+    mobileMenu.classList.add('open');
+    mobileOverlay.classList.add('active');
+    document.body.style.overflow = 'hidden';
 
-// Select key DOM elements
-const menuToggle = document.getElementById('menu-btn');
-const navbar = document.getElementById('navbar');
-const body = document.body;
+    // Animate links with stagger
+    menuLinks.forEach((link, i) => {
+        setTimeout(() => {
+            link.style.opacity = '1';
+            link.style.transform = 'translateX(0)';
+        }, i * 200); // 100ms delay per link
+    });
 
-// ---- Menu Toggle (☰ / ✕) ----
-menuToggle.addEventListener('click', () => {
-  const isActive = navbar.classList.toggle('active');
+    // Animate button last
+    setTimeout(() => {
+        freeBtn.style.opacity = '1';
+        freeBtn.style.transform = 'translateX(0)';
+    }, menuLinks.length * 100);
+}
 
-  // Prevent background scroll when menu is active
-  body.style.overflow = isActive ? 'hidden' : 'auto';
+function closeMenuFunc() {
+    // Reset links & button
+    menuLinks.forEach(link => {
+        link.style.opacity = '0';
+        link.style.transform = 'translateX(-20px)';
+    });
+    freeBtn.style.opacity = '0';
+    freeBtn.style.transform = 'translateX(-20px)';
 
-  // Toggle button icon between open and close
-  menuToggle.textContent = isActive ? '✕' : '☰';
-});
+    mobileMenu.classList.remove('open');
+    mobileOverlay.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
 
-// ---- Close Menu on Nav Link Click ----
-document.querySelectorAll('.navbar a').forEach(link => {
-  link.addEventListener('click', () => {
-    navbar.classList.remove('active');
-    body.style.overflow = 'auto';
-    menuToggle.textContent = '☰';
-  });
-});
+menuToggle.addEventListener('click', openMenu);
+closeMenu.addEventListener('click', closeMenuFunc);
+mobileOverlay.addEventListener('click', closeMenuFunc);
 
-// ---- Smooth Scrolling for Anchor Links ----
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function (e) {
-    e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-
-    if (target) {
-      // Adjust scroll position to account for fixed header height
-      window.scrollTo({
-        top: target.offsetTop - 100,
-        behavior: 'smooth'
-      });
-    }
-  });
+// Close mobile menu when clicking any link & set active link
+menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        closeMenuFunc();
+        menuLinks.forEach(l => l.classList.remove('active-link'));
+        link.classList.add('active-link');
+    });
 });
