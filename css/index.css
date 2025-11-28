@@ -1057,6 +1057,7 @@ footer {
             background-size: 90%;
             margin-bottom: 2rem;
             height: max-content;
+            padding: 1rem !important;
 
             .card-header {
                 img {
@@ -1107,11 +1108,11 @@ footer {
                         h1 {
                             font-weight: 600;
                             width: 100%;
-                            font-size: 1.5rem !important;
+                            font-size: 1.8rem !important;
                             margin-top: -7rem !important;
 
                             span {
-                                font-size: 2.2rem;
+                                font-size: 1.8rem;
                             }
                         }
 
