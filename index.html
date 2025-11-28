@@ -22,14 +22,12 @@
     <meta property="og:url" content="https://metrolabx.com.ng">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
-    <!-- Apple touch icon / favicon -->
-    <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
-    <link rel="manifest" href="images/favicon_io/manifest.json">
-    <link rel="apple-touch-icon" href="images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="images/favicon_io/favicon-16x16.png">
-    <link rel="icon" type="image/png" href="images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" href="images/favicon_io/android-chrome-192x192.png">
-    <link rel="icon" type="image/png" href="images/favicon_io/android-chrome-512x512.png">
+   
+   <!-- Apple touch icon / favicon -->
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
     <!-- title-->
     <title>MetroLabX</title>
     <!-- BOOTSTRAP CSS and DEFINED CSS-->
@@ -59,15 +57,13 @@
     <!-- HEADER -->
     <header id="mainHeader" class="sticky">
         <!-- NAV -->
-        <nav class="navbar navbar-expand-lg px-3" aria-label="Primary navigation">
+        <nav class="navbar navbar-expand-lg px-3" id="navbar" aria-label="Primary navigation">
             <div class="container-fluid mobile-nav-container">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo-light.svg" alt="MetroLabX">
                 </a>
                 <!-- MOBILE MENU ICON -->
-                <button class="btn btn-primary menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu"
-                data-bs-scroll="false">
-                menu</button>
+                <button class="menu-btn" id="menu-toggle" type="button" aria-label="Toggle menu">☰</button>
 
                 <!-- LINKS TO OTHER PAGES -->
                 <div class="collapse navbar-collapse" id="navbarNav">
@@ -138,7 +134,7 @@
                                 <h1 class="mb-3">Integrate Data-driven <span>AI Solutions</span> Into Your
                                     Business & Organization</h1>
                                 <p>Harness the power of Data-driven Artificial Intelligence to transform
-                                    your business & unlock hidden insights.
+                                    your business.
                                 </p>
                             </div>
                         </div>
@@ -280,7 +276,7 @@
                     <h3 class="text-white">
                         “Every living business that embraced innovation was once a business that took the leap of faith
                         towards honouring the tradition of calculated risk.”
-                        <p class="text-white d-inline fw-normal author">
+                        <p class="text-white mt-3 fw-normal author">
                             &mdash; Salim Sulaiman Liman , <span class="fst-italic">Computer Scientist & Writer</span>
                         </p>
                     </h3>
@@ -613,7 +609,7 @@
                             <div class="invalid-feedback">Please enter a valid email address.</div>
                         </div>
                         <!-- Book / Submit -->
-                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12">
+                        <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 button-container">
                             <button type="submit" class="w-100" disabled>
                                 Book Consultation
                             </button>

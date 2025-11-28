@@ -197,7 +197,7 @@ header.sticky nav {
     p {
         font-size: 1rem;
         line-height: 1.8rem;
-        width: 70%;
+        width: 90%;
         font-family: 'Muli', sans-serif !important;
     }
 }
@@ -522,7 +522,7 @@ footer {
     }
 
     .free-consultation-section {
-        padding: 4rem 0.8rem 4rem 0;
+        padding: 4rem 0.2rem 4rem 0.2rem;
 
         h4 {
             font-size: 1rem;
@@ -587,12 +587,13 @@ footer {
     }
 
 .quick-contact-container {
-    padding-right: 1rem !important;
+    padding-right: 0.2rem !important;
     padding-left: 0.2rem !important;
 }
 
 .form-container {
     padding-left: 0 !important;
+    padding-right: 0.2rem !important;
 }
     form {
         margin-top: 4rem !important;
@@ -603,4 +604,70 @@ footer {
 
 /* CONTACT ---> END */
 
+}
+
+
+
+
+
+@media(max-width: 991px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+    .quick-contact-container {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+    }
+
+    .form-container {
+        padding-left: 0 !important;
+        margin-top: 3rem;
+    }
+
+    .free-consultation-section {
+        .button-container {
+            margin-top: 1rem;
+            width: 100%;
+        }
+    }
+
+    header {
+
+        nav {
+            .navbar-brand {
+                img {
+                    height: 2.1rem;
+                }
+            }
+
+        }
+    }
+
+    .heroes {
+        padding: 8rem 2rem 0rem 2rem;
+
+        h1 {
+            font-weight: 600;
+            width: 100%;
+            font-size: 2rem;
+            text-align: left !important;
+
+            span {
+                font-size: 2.2rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6rem;
+            width: 100%;
+            text-align: left !important;
+        }
+    }
 }

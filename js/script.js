@@ -120,12 +120,58 @@ window.addEventListener('scroll', () => {
 
 
 
-// offcanvas
-const offcanvas = document.getElementById('sideMenu');
-offcanvas.addEventListener('shown.bs.offcanvas', () => {
-  document.body.classList.add('no-scroll');
-})
-offcanvas.addEventListener('hidden.bs.offcanvas', () => {
-  document.body.classList.remove('no-scroll');
-})
 
+/**
+ * script.js
+ * Handles responsive navigation menu toggling and smooth scrolling for internal page links.
+ *
+ * Features:
+ * 1. Mobile menu toggle (open/close on click)
+ * 2. Locks body scroll when menu is open
+ * 3. Smooth scrolling to anchor links (#about, #projects, etc.)
+ * 4. Auto-close menu when a navigation link is clicked
+ *
+ * Author: Salim Sulaiman Liman
+ * Year: 2025
+ */
+
+// Select key DOM elements
+const menuToggle = document.getElementById('menu-btn');
+const navbar = document.getElementById('navbar');
+const body = document.body;
+
+// ---- Menu Toggle (☰ / ✕) ----
+menuToggle.addEventListener('click', () => {
+  const isActive = navbar.classList.toggle('active');
+
+  // Prevent background scroll when menu is active
+  body.style.overflow = isActive ? 'hidden' : 'auto';
+
+  // Toggle button icon between open and close
+  menuToggle.textContent = isActive ? '✕' : '☰';
+});
+
+// ---- Close Menu on Nav Link Click ----
+document.querySelectorAll('.navbar a').forEach(link => {
+  link.addEventListener('click', () => {
+    navbar.classList.remove('active');
+    body.style.overflow = 'auto';
+    menuToggle.textContent = '☰';
+  });
+});
+
+// ---- Smooth Scrolling for Anchor Links ----
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+
+    if (target) {
+      // Adjust scroll position to account for fixed header height
+      window.scrollTo({
+        top: target.offsetTop - 100,
+        behavior: 'smooth'
+      });
+    }
+  });
+});

@@ -164,7 +164,7 @@ header.sticky nav {
 
     h1 {
         font-weight: 600;
-        width: 60%;
+        width: 100%;
         font-size: 2.3rem;
         font-family: 'Poppins', sans-serif !important;
 
@@ -178,7 +178,7 @@ header.sticky nav {
 
     p {
         font-size: 1rem;
-        width: 70%;
+        width: 90%;
         line-height: 1.8rem;
         font-family: 'Muli', sans-serif !important;
     }
@@ -509,4 +509,61 @@ footer {
     }
 
 }
+}
+
+
+
+
+
+@media(max-width: 991px) {
+
+    .menu-btn {
+        display: block;
+    }
+
+    label {
+        font-size: 0.8rem;
+    }
+
+
+    .free-consultation-section {
+        .button-container {
+            margin-top: 1rem;
+            width: 100%;
+        }
+    }
+
+    header {
+
+        nav {
+            .navbar-brand {
+                img {
+                    height: 2.1rem;
+                }
+            }
+
+        }
+    }
+
+      .heroes {
+        padding: 8rem 2rem 0rem 2rem;
+
+        h1 {
+            font-weight: 600;
+            width: 100%;
+            font-size: 2rem;
+            text-align: left !important;
+
+            span {
+                font-size: 2.2rem;
+            }
+        }
+
+        p {
+            font-size: 1rem;
+            line-height: 1.6rem;
+            width: 100%;
+            text-align: left !important;
+        }
+    }
 }
