@@ -3,6 +3,8 @@
 <html lang="en">
 
 <head>
+    <!-- Add canonical URL if available -->
+    <link rel="canonical" href="">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,7 +31,7 @@
     <meta property="og:locale" content="en_US">
 
     <!-- Apple touch icon / favicon -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.webp">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -45,9 +47,11 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script id="root" src="js/script.js" defer></script>
 
+    <link rel="stylesheet" href="css/consolidated-media-queries.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#maincontent" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
   <!-- HEADER -->
     <header id="mainHeader" class="sticky">
@@ -55,7 +59,7 @@
         <nav class="navbar navbar-expand-lg px-3" aria-label="Primary navigation">
             <div class="container-fluid mobile-nav-container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo-light.svg" alt="MetroLabX">
+                    <img loading="lazy" src="images/logo-light.svg" alt="MetroLabX">
                 </a>
                 <!-- MOBILE MENU ICON -->
                 <button class="btn btn-primary menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu"
@@ -105,7 +109,7 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-5">
                         <div class="card">
                             <div class="card-head">
-                                <img src="images/architecture-mini.jpg" alt="software" class="img-fluid">
+                                <img loading="lazy" src="images/architecture-mini.webp" alt="software" class="img-fluid">
                             </div>
                             <div class="p-3">
                                 <h5 class="highlighted-text">Architectural Designs</h5>
@@ -120,7 +124,7 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-5">
                         <div class="card">
                             <div class="card-head">
-                                <img src="images/web-app.jpg" alt="software" class="img-fluid">
+                                <img loading="lazy" src="images/web-app.webp" alt="software" class="img-fluid">
                             </div>
                             <div class="p-3">
                                 <h5 class="highlighted-text">Web Apps Development</h5>
@@ -135,7 +139,7 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-5">
                         <div class="card">
                             <div class="card-head">
-                                <img src="images/data-ai.jpg" alt="software" class="img-fluid">
+                                <img loading="lazy" src="images/data-ai.webp" alt="software" class="img-fluid">
                             </div>
                             <div class="p-3">
                                 <h5 class="highlighted-text">Data-driven AI Solutions</h5>
@@ -151,7 +155,7 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-5">
                         <div class="card">
                             <div class="card-head">
-                                <img src="images/mobile-dev.jpg" alt="software" class="img-fluid">
+                                <img loading="lazy" src="images/mobile-dev.webp" alt="software" class="img-fluid">
                             </div>
                             <div class="p-3">
                                 <h5 class="highlighted-text">Mobile Apps Development</h5>
@@ -166,7 +170,7 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-5">
                         <div class="card">
                             <div class="card-head">
-                                <img src="images/engineering-design.jpg" alt="software" class="img-fluid">
+                                <img loading="lazy" src="images/engineering-design.webp" alt="software" class="img-fluid">
                             </div>
                             <div class="p-3">
                                 <h5 class="highlighted-text">Engineering Drawings</h5>
@@ -182,7 +186,7 @@
                     <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12 mb-5">
                         <div class="card">
                             <div class="card-head">
-                                <img src="images/web-design.jpg" alt="software" class="img-fluid">
+                                <img loading="lazy" src="images/web-design.webp" alt="software" class="img-fluid">
                             </div>
                             <div class="p-3">
                                 <h5 class="highlighted-text">Website Designs</h5>
@@ -201,7 +205,7 @@
                                     class="badge-container d-flex align-items-center justify-content-center shadow rounded-pill">
                                     <h6 class="m-0 mb-1 p-0 text-white">Free</h6>
                                 </div>
-                                <img src="images/virtual-meeting.jpg" alt="software" class="img-fluid">
+                                <img loading="lazy" src="images/virtual-meeting.webp" alt="software" class="img-fluid">
                             </div>
                             <div class="p-3">
                                 <h5 class="highlighted-text">Virtual Consultations</h5>
@@ -257,7 +261,7 @@
             <div class="row py-3 mobile-padding-top-none">
                 <!-- logo -->
                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex ps-5">
-                    <img src="images/logo-light.svg" alt="MetroLabX">
+                    <img loading="lazy" src="images/logo-light.svg" alt="MetroLabX">
                 </div>
                 <!-- commitment -->
                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 commitment">
@@ -313,6 +317,8 @@
         </div>
     </footer>
 
+
+    <script src="assets/js/menu-accessibility.js"></script>
 </body>
 
 </html>

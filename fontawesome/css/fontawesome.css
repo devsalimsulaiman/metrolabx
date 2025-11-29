@@ -259,20 +259,7 @@
   animation-timing-function: var(--fa-animation-timing, steps(8));
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .fa-beat,
-  .fa-bounce,
-  .fa-fade,
-  .fa-beat-fade,
-  .fa-flip,
-  .fa-pulse,
-  .fa-shake,
-  .fa-spin,
-  .fa-spin-pulse {
-    animation: none !important;
-    transition: none !important;
-  }
-}
+
 @keyframes fa-beat {
   0%, 90% {
     transform: scale(1);
@@ -8359,3 +8346,11 @@
 .fa-caravan {
   --fa: "\f8ff";
 }
+
+
+/* accessibility focus */
+:focus {
+    outline: 3px solid Highlight;
+    outline-offset: 2px;
+}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}

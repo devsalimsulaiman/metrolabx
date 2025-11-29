@@ -21,3 +21,10 @@
   font-weight: 400;
   src: url("../webfonts/fa-regular-400.woff2") format("woff2");
 }
+
+/* accessibility focus */
+:focus {
+    outline: 3px solid Highlight;
+    outline-offset: 2px;
+}
+.skip-link{position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden}

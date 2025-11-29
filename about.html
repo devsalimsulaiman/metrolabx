@@ -3,6 +3,8 @@
 <html lang="en">
 
 <head>
+    <!-- Add canonical URL if available -->
+    <link rel="canonical" href="">
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,7 +31,7 @@
     <meta property="og:locale" content="en_US">
 
     <!-- Apple touch icon / favicon -->
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.webp">
     <link rel="manifest" href="/manifest.json">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
 
@@ -45,9 +47,11 @@
     <script src="js/bootstrap.bundle.min.js"></script>
     <script id="root" src="js/script.js" defer></script>
 
+    <link rel="stylesheet" href="css/consolidated-media-queries.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#maincontent" style="position:absolute;left:-9999px;top:auto;width:1px;height:1px;overflow:hidden;">Skip to content</a>
 
     <!-- HEADER -->
     <header id="mainHeader" class="sticky">
@@ -55,7 +59,7 @@
         <nav class="navbar navbar-expand-lg px-3" aria-label="Primary navigation">
             <div class="container-fluid mobile-nav-container">
                 <a class="navbar-brand" href="index.html">
-                    <img src="images/logo-light.svg" alt="MetroLabX">
+                    <img loading="lazy" src="images/logo-light.svg" alt="MetroLabX">
                 </a>
                 <!-- MOBILE MENU ICON -->
                 <button class="btn btn-primary menu-btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#sideMenu" aria-controls="sideMenu"
@@ -103,7 +107,7 @@
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="card card-software py-4 text-center">
                         <div class="card-header bg-transparent border-0">
-                            <img src="images/leadership.png" alt="AI Icon" class="software-icon">
+                            <img loading="lazy" src="images/leadership.webp" alt="AI Icon" class="software-icon">
                             <h6 class="card-title mt-4 highlighted-text">Our Mission</h6>
                         </div>
                         <div class="card-body">
@@ -118,7 +122,7 @@
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="card card-ai py-4 text-center">
                         <div class="card-header bg-transparent border-0">
-                            <img src="images/goal.png" alt="AI Icon">
+                            <img loading="lazy" src="images/goal.webp" alt="AI Icon">
                             <h6 class="card-title mt-4 highlighted-text">Our Vision</h6>
                         </div>
                         <div class="card-body">
@@ -133,7 +137,7 @@
                 <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-6 col-sm-12">
                     <div class="card card-arch py-4 text-center">
                         <div class="card-header bg-transparent border-0">
-                            <img src="images/team-building.png" alt="Architecture icon">
+                            <img loading="lazy" src="images/team-building.webp" alt="Architecture icon">
                             <h6 class="card-title mt-4 highlighted-text">The Team</h6>
                         </div>
                         <div class="card-body">
@@ -189,7 +193,7 @@
             <div class="row py-3 mobile-padding-top-none">
                 <!-- logo -->
                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 d-flex ps-5">
-                    <img src="images/logo-light.svg" alt="MetroLabX">
+                    <img loading="lazy" src="images/logo-light.svg" alt="MetroLabX">
                 </div>
                 <!-- commitment -->
                 <div class="col-xxl-3 col-xl-3 col-lg-3 col-md-6 col-sm-12 commitment">
@@ -245,6 +249,8 @@
         </div>
     </footer>
 
+
+    <script src="assets/js/menu-accessibility.js"></script>
 </body>
 
 </html>
