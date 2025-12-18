@@ -180,9 +180,7 @@ header.sticky nav {
 /* HEROES SECTION ---> STARTS */
 .heroes {
     position: relative;
-    height: 100vh;
-    height: 100dvh;
-    /* Mobile fix */
+    height: auto;
     overflow: hidden;
     background: transparent;
 
@@ -193,9 +191,12 @@ header.sticky nav {
             height: 100%;
 
             .carousel-item {
+                padding-top: 8rem;
                 position: relative;
                 height: 100%;
                 overflow: hidden;
+                min-height: 100svh;   /* safer on mobile */
+                min-height: 100dvh;   /* modern browsers */
 
                 &::before {
                     content: '';
@@ -318,7 +319,49 @@ header.sticky nav {
     .heroes {
         min-height: auto;
     }
+
+    .heroes .carousel-caption h1 {
+        font-size: 1.5rem !important;
+        width: 100%;
+    }
+
+    .heroes .carousel-caption h1 span {
+        font-size: 1.5rem !important;
+    }
+
+    .heroes .carousel-caption p {
+        font-size: 1rem;
+        line-height: 1.6;
+        width: 100%;
+    }
+
+    .heroes .carousel-caption h1 {
+    font-size: clamp(1.8rem, 4vw, 3rem);
 }
+
+.heroes .carousel-caption h1 span {
+    font-size: clamp(2rem, 4.5vw, 3.3rem);
+}
+
+.heroes .carousel-caption p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+}
+
+
+    .heroes .carousel-indicators {
+        margin-bottom: 4rem;
+    }
+
+     .carousel-item img {
+        height: auto;
+        min-height: 100%;
+    }
+
+    .trusted-by {
+        position: relative; /* no longer stealing height */
+    }
+}
+
 
 
 @keyframes scroll {
@@ -1104,12 +1147,10 @@ footer {
     }
 
     .heroes {
-        height: 100vh;
-        height: 100dvh;
 
         .carousel {
 
-            .carousel-inner {
+        .carousel-inner {
 
                 .carousel-item {
                     .carousel-caption {
@@ -1119,7 +1160,7 @@ footer {
                             font-weight: 600;
                             width: 100%;
                             font-size: 1.9rem !important;
-                            margin-top: -7rem !important;
+                            /*margin-top: -7rem !important;*/
 
                             span {
                                 font-size: 1.9rem !important;
@@ -1240,9 +1281,6 @@ footer {
 
 @media(max-width: 992px) {
     .heroes {
-        height: 100vh;
-        height: 100dvh;
-        /* Mobile fix */
 
         .carousel {
 
@@ -1254,7 +1292,7 @@ footer {
                         h1 {
                             width: 80%;
                             font-size: 2.5rem;
-                            margin-top: -8rem !important;
+                            /*margin-top: -12rem !important;*/
 
                             span {
                                 font-size: 2.7rem;
@@ -1281,9 +1319,6 @@ footer {
 
 @media(max-width: 1326px) {
     .heroes {
-        height: 100vh;
-        height: 100dvh;
-        /* Mobile fix */
 
         .carousel {
 
@@ -1295,6 +1330,7 @@ footer {
                         h1 {
                             width: 90%;
                             font-size: 2.5rem;
+                            /*margin-top: -12rem !important;*/
 
                             span {
                                 font-size: 2.7rem;
