@@ -85,7 +85,7 @@ header nav {
 }
 
 header nav .navbar-brand img {
-    height: 2.8rem;
+    height: 2.5rem;
     width: auto;
 }
 
@@ -138,10 +138,10 @@ header.sticky nav {
     background-color: transparent;
     border: 1px solid #ffffff;
     color: #ffffff;
-    padding: 0.75rem 1.5rem;
+    padding: 0.5rem 1rem;
     border-radius: 0.5rem;
     font-family: 'Comfortaa', sans-serif;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     transition: background-color 0.7s ease;
 }
 
@@ -1080,10 +1080,6 @@ footer p {
         padding-right: 1rem;
     }
 
-    footer .commitment {
-        text-align: justify;
-    }
-
     footer .quick-links {
         margin-top: 2rem;
         margin-bottom: 1rem;
@@ -1159,6 +1155,7 @@ footer p {
 
     .briefing-cards .card .card-text{
          margin-top: -0.5rem !important;
+         line-height: 1.7rem;
     }
 
     .briefing-cards .card .card-header img {
@@ -1327,16 +1324,16 @@ footer p {
     }
 
     .statistics blockquote h3 {
-        font-size: 1.5rem;
+        font-size: 1.7rem;
         line-height: 2rem;
         font-weight: normal;
     }
     .statistics blockquote h3 p {
-        font-size: 0.8rem;
+        font-size: 0.95rem;
         margin-top: 0.7rem !important;
     }
     .statistics blockquote h3 p span {
-        font-size: 0.7rem;
+        font-size: 0.85rem;
         display: block !important;
         margin-top: -0.8rem;
         font-style: normal !important;
