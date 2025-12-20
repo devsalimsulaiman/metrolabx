@@ -1321,6 +1321,7 @@ footer p {
     .statistics blockquote {
         justify-content: start !important;
         padding-left: 0.5rem;
+        padding-right: 0.5rem;
     }
 
     .statistics blockquote h3 {
