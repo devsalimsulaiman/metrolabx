@@ -669,7 +669,6 @@ header.sticky nav {
 /* Card */
 .interest-card {
   background: #ffffff;
-  border-radius: 0.25rem;
   padding: 2rem;
   display: grid;
   gap: 1rem;
@@ -1382,13 +1381,14 @@ header.sticky nav {
 }
 
 
-/* MOBILE MENU */
+/* ---------------- MOBILE MENU ---------------- */
 .mobile-menu {
   position: fixed;
   top: 0;
-  left: -75%; /* slide from left */
+  left: -75%;           /* slide from left */
   width: 75%;
-  height: 100vh;
+  height: 100vh;        /* full viewport height */
+  max-height: 100vh;    /* safeguard for landscape */
   background-color: var(--primary-blue);
   color: #fff;
   opacity: 0.95;
@@ -1399,12 +1399,16 @@ header.sticky nav {
   flex-direction: column;
   gap: 2.5rem;
   transition: left 0.4s ease-in-out;
+
+  overflow-y: auto;                 /* enable vertical scrolling */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
 }
 
 .mobile-menu.open {
   left: 0;
 }
 
+/* Close button */
 .close-btn {
   background: none;
   border: none;
@@ -1414,6 +1418,7 @@ header.sticky nav {
   cursor: pointer;
 }
 
+/* Menu links */
 .mobile-menu-links {
   list-style: none;
   padding: 0;
@@ -1438,8 +1443,9 @@ header.sticky nav {
   color: #FFD700;
 }
 
+/* Mobile Free Consultation Button */
 .mobile-free-consultation {
-  margin-top: auto;
+  margin-top: auto; /* stick to bottom */
   padding: 0.9rem 1.4rem;
   margin-bottom: 2rem;
   border: 2px solid #fff;
@@ -1486,5 +1492,13 @@ header.sticky nav {
 
   #navbarNav {
     display: none !important;
+  }
+}
+
+/* Landscape mode: small height adjustments */
+@media (max-height: 480px) and (orientation: landscape) {
+  .mobile-menu {
+    height: 100%;        /* full container height */
+    max-height: 100%;    /* ensure scrolling works */
   }
 }
