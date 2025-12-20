@@ -561,22 +561,6 @@ header.sticky nav {
     color: var(--primary-grey);
 }
 
-/* GRID WRAPPER (USE THIS IN HTML) */
-.statistics-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
-    align-items: stretch;
-}
-
-/* OVERLAP EFFECT WITHOUT NEGATIVE MARGINS */
-.statistics-grid .card:nth-child(2) {
-    transform: translateY(-1.5rem);
-}
-
-.statistics-grid .card:nth-child(3) {
-    transform: translateY(-3rem);
-}
 
 /* CARD */
 .statistics .card {
@@ -1117,6 +1101,16 @@ header.sticky nav {
 
     footer h6 {
         margin-bottom: 1rem;
+    }
+
+    footer .quick-links {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    footer .social-icons {
+        display: grid;
+        gap: 1rem;
     }
 
     footer p,
