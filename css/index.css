@@ -1324,7 +1324,8 @@ footer p {
     }
 
     .statistics blockquote h3 {
-        font-size: 1.7rem;
+        font-size: 1.55rem;
+        width: 100% !important;
         line-height: 2rem;
         font-weight: normal;
     }
