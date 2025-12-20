@@ -1320,6 +1320,9 @@ footer p {
     }
     .statistics blockquote h3 p span {
         font-size: 0.7rem;
+        display: block !important;
+        margin-top: -0.8rem;
+        font-style: normal !important;
     }
     .statistics .counters {
         padding: 0 0.5rem;
