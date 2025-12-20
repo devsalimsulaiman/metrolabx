@@ -1149,21 +1149,32 @@ footer p {
     }
 
     .briefing-cards .card {
-        background-size: 90%;
+         background-size: 90%;
         margin-bottom: 2rem;
         height: max-content;
         padding: 0.5rem !important;
         text-align: left !important;
+        transition: none; /* disables desktop hover transition */
+    }
+
+    .briefing-cards .card .card-text{
+         margin-top: -0.5rem !important;
     }
 
     .briefing-cards .card .card-header img {
-        width: 4rem;
+        width: 4rem !important;
         transition: none;
     }
 
     .briefing-cards .card .card-header .software-icon {
-        width: 5rem;
+        width: 5rem !important;
         transition: none;
+    }
+
+ .briefing-cards .card .card-header img,
+    .briefing-cards .card .card-header .software-icon {
+        width: auto; /* reset any scaled desktop sizes */
+        transition: none; /* remove scaling animation */
     }
 
     .briefing-cards .card .card-header .card-title {
@@ -1175,10 +1186,14 @@ footer p {
         padding-left: 1rem !important;
     }
 
-    .briefing-cards .card:hover {
-        transform: none;
-        border: 0.0625rem solid var(--primary-blue);
+     .briefing-cards .card:hover {
+        transform: none;  /* disables scale on hover */
+        border: 0.0625rem solid var(--primary-blue); /* only border changes */
     }
+
+.briefing-cards .intro-div {
+    margin-bottom: 2rem;
+}
 
     /* Our Software */
     .our-software {
@@ -1191,6 +1206,7 @@ footer p {
 
     .our-software .software-snapshots {
         padding: 2rem !important;
+        padding-bottom: 4rem !important;
     }
 
     .our-software .software-snapshots img {
@@ -1211,6 +1227,7 @@ footer p {
 
     .our-software .software-summary {
         padding: 2rem;
+        padding-top: 0 !important;
     }
 
     .our-software .software-summary h4 {
@@ -1330,6 +1347,10 @@ footer p {
     .statistics .sources {
         text-align: left !important;
         padding: 0 0.5rem;
+    }
+
+    .trusted-section .trusted-content {
+        text-align: left;
     }
 }
 
