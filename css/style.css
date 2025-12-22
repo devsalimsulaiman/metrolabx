@@ -71,6 +71,14 @@ a {
     -webkit-text-fill-color: transparent;
 }
 
+
+.world-dotted-map-bg {
+    position: absolute;
+    inset:  0;
+    z-index: 1;
+    object-fit: cover;
+}
+
 /* MOBILE MENU BUTTON */
 .menu-btn {
     display: none;
@@ -537,11 +545,11 @@ header.sticky nav {
 /* OUR SOFTWARE  ---> ENDS */
 
 /* STATISTICS --> START */
-/* STATISTICS SECTION */
 .statistics {
     padding-top: 4rem;
     padding-bottom: 6rem;
     background-color: #000000;
+    position: relative;
 }
 
 /* TEXT */
