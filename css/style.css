@@ -111,14 +111,14 @@ header nav .nav-link:hover {
 
 header nav .active-link {
     border-bottom: 2px solid #ffffff;
-    padding-bottom: 4px;
+    padding-bottom: 2px;
+    border-radius: 0;
 }
+
 
 /* HEADER SCROLLED STATE */
 header.scrolled nav {
-    background: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0.9),
-        rgba(0, 0, 0, 0.75));
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.75));
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
@@ -138,7 +138,7 @@ header.sticky nav {
     background-color: transparent;
     border: 1px solid #ffffff;
     color: #ffffff;
-    padding: 0.5rem 1rem;
+    padding: 0.8rem 1.3rem;
     border-radius: 0.5rem;
     font-family: 'Comfortaa', sans-serif;
     font-size: 0.8rem;
@@ -361,14 +361,17 @@ header.sticky nav {
 }
 
 /* SECTION HEADINGS */
-.briefing-cards h4 {
+.briefing-cards .eyebrow {
+    display: inline-block;
     font-size: 1rem;
     font-weight: 700;
-    line-height: 2rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
 }
 
-.briefing-cards h5 {
+.briefing-cards h2 {
     font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 800;
     margin-bottom: 1rem;
@@ -886,7 +889,9 @@ header.sticky nav {
 
 .free-consultation-section input:focus,
 .free-consultation-section .form-select:focus,
-.free-consultation-section textarea:focus {
+.free-consultation-section textarea:focus, 
+.contact-form input:focus,
+.contact-form textarea:focus {
     border-color: #0074ff;
     box-shadow: none !important;
     outline: none;
@@ -1108,7 +1113,7 @@ footer p {
 
     .free-consultation-section h4,
     .trusted-section h4,
-    .briefing-cards h4 {
+    .briefing-cards span {
         font-size: 1rem;
         font-weight: 700;
         line-height: 2rem;
@@ -1116,7 +1121,7 @@ footer p {
 
     .free-consultation-section h5,
     .trusted-section h5,
-    .briefing-cards h5 {
+    .briefing-cards h2 {
         font-size: 1.8rem;
         font-weight: 500;
         margin-bottom: 1rem !important;
@@ -1192,7 +1197,7 @@ footer p {
     margin-bottom: 2rem;
 }
 
-.briefing-cards .intro-div h4 {
+.briefing-cards .intro-div span {
     font-size: 0.9rem !important;
 }
 
@@ -1537,4 +1542,262 @@ footer p {
         max-height: 100%;
         /* ensure scrolling works */
     }
+}
+
+/* CONTACT CARDS GRID */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* CARD BASE */
+.contact-card {
+  position: relative;
+  border: 1px solid #ddd;
+  padding: 2.5rem 1.5rem 3.5rem;
+  text-align: center;
+  overflow: hidden;
+  transition: border-color 0.35s ease;
+}
+
+/* CONTENT STACK */
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  transition: transform 0.35s ease;
+}
+
+.contact-card i {
+  font-size: 3rem;
+  color: var(--primary-blue);
+  margin-bottom: 0.4rem;
+}
+
+.contact-card h6 {
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.contact-card p {
+  font-size: 0.9rem;
+  color: var(--primary-grey);
+}
+
+/* ACTION BUTTON */
+.contact-card .action-btn {
+  position: absolute;
+  left: 50%;
+  bottom: 1.5rem;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  padding: 0.6rem 1.4rem;
+  border: 1px solid var(--primary-blue);
+  background: transparent;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary-blue);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* DESKTOP HOVER ONLY */
+@media (hover: hover) {
+  .contact-card:hover {
+    border-color: var(--primary-blue);
+  }
+
+  .contact-card:hover .card-content {
+    transform: translateY(-18px);
+  }
+
+  .contact-card:hover .action-btn {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+
+  .contact-card .action-btn:hover {
+    background-color: var(--primary-blue);
+    color: #fff;
+  }
+}
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  .contact-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (hover: hover) {
+  .contact-card {
+    transition: 
+      border-color 0.35s ease,
+      box-shadow 0.35s ease,
+      transform 0.35s ease;
+  }
+
+  .contact-card:hover {
+    border-color: var(--primary-blue);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
+  }
+}
+
+
+/*open modal button */
+.direct-message-cta {
+  display: flex;
+  justify-content: center;
+  margin: 3rem 0 6rem;
+}
+
+.open-modal-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.85rem 1.8rem;
+  border: 1px solid var(--primary-blue);
+  background: transparent;
+  color: var(--primary-blue);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.open-modal-btn i {
+  font-size: 0.9rem;
+}
+
+@media (hover: hover) {
+  .open-modal-btn:hover {
+    background: var(--primary-blue);
+    color: #fff;
+  }
+}
+
+
+/*contact form modal */
+body.modal-open {
+  overflow: hidden;
+}
+
+.contact-modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 9999;
+}
+
+.contact-modal.active {
+  display: block;
+}
+
+.modal-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.modal-content {
+  position: relative;
+  background: #fff;
+  width: min(90%, 420px);
+  max-height: 90vh;
+  overflow-y: auto;
+  margin: 9vh auto;
+  padding: 2rem;
+  animation: modalSlideUp 0.35s ease;
+}
+
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.modal-content h4 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+}
+
+.close-modal {
+  position: absolute;
+  top: 0.8rem;
+  right: 0.9rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #ccc;
+  font-size: 0.9rem;
+}
+
+
+.contact-form textarea {
+  resize: vertical;
+  max-height: 150px;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--primary-blue);
+  background: var(--primary-blue);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+
+/* Modal scrollbar */
+.modal-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.modal-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+  background-color: var(--primary-blue);
+  border-radius: 10px;
+}
+
+/* Firefox */
+.modal-content {
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-blue) transparent;
 }
