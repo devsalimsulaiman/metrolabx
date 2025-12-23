@@ -90,18 +90,27 @@
 
         <!-- CONTACT HERO -->
         <!-- this section is using CSS of the briefing-cards. do not confuse the class naming convention -->
-        <section class="briefing-cards">
-            <div class="container mt-5">
+        <section class="briefing-cards section-animated">
+            
+            <!-- Stars background -->
+            <div class="stars"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+            <div class="shooting-star"></div>
+
+            <div class="container space-top">
                 <div class="text-center intro-div">
                     <span class="eyebrow highlighted-text">Contact Us</span>
-                    <h2>Available 24/7</h2>
-                    <p class="mb-1">Whether you want to upgrade your business with technology, reduce software costs, or simply discuss your ideas — we are here. You can reach us using any of the digital means below.</p>
+                    <h2 class="text-white">Available 24/7</h2>
+                    <p class="mb-1 text-white">Whether you want to upgrade your business with technology, reduce software costs, or simply discuss your ideas — we are here. You can reach us using any of the digital means below.</p>
                 </div>
             </div>
         </section>
 
         <!-- CONTACT CARDS -->
-        <section class="contact-cards container pt-2">
+        <section class="contact-cards container space-top pt-2">
             <div class="contact-card">
                 <div class="card-content">
                     <i class="fas fa-phone"></i>
@@ -162,9 +171,9 @@
 
         <!-- OPEN CONTACT FORM MODAL -->
         <div class="direct-message-cta">
-            <button class="open-modal-btn">
+            <button class="contact-action-btn open-modal-btn">
                 <i class="fas fa-paper-plane"></i>
-                Send a direct message from here instead
+                Send direct message <span class="d-none d-md-inline">from here instead</span>
             </button>
         </div>
 
@@ -325,47 +334,6 @@
             </div>
         </div>
     </footer>
-
-
-    <!-- script for modal display  -->
-        <script>
-  const modal = document.getElementById("contactModal");
-  const openBtn = document.querySelector(".open-modal-btn");
-  const closeBtn = document.querySelector(".close-modal");
-  const form = modal.querySelector(".contact-form");
-  const submitBtn = form.querySelector(".submit-btn");
-  const requiredFields = form.querySelectorAll("input[required], textarea[required]");
-
-  function validateForm() {
-    const isValid = [...requiredFields].every(field => field.checkValidity());
-    submitBtn.disabled = !isValid;
-  }
-
-  function openModal() {
-    modal.classList.add("active");
-    document.body.classList.add("modal-open");
-  }
-
-  function closeModal() {
-    modal.classList.remove("active");
-    document.body.classList.remove("modal-open");
-    form.reset();
-    submitBtn.disabled = true;
-  }
-
-  openBtn.addEventListener("click", openModal);
-  closeBtn.addEventListener("click", closeModal);
-
-  requiredFields.forEach(field => {
-    field.addEventListener("input", validateForm);
-  });
-
-  form.addEventListener("submit", () => {
-    closeModal();
-  });
-</script>
-
-
 
 </body>
 

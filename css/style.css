@@ -84,6 +84,79 @@ a {
     display: none;
 }
 
+/* SECTION ANIMATION BACKGROUND WITH MULTIPLE BOXES */
+/* SECTION ANIMATION - STARS + SHOOTING STARS */
+.section-animated {
+    position: relative;
+    overflow: hidden;
+    background-color: #000; /* optional dark for stars, or keep white */
+}
+
+/* Static twinkling stars */
+.stars {
+    width: 1px;
+    height: 1px;
+    position: absolute;
+    background: white;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-shadow:
+        2vw 5vh 2px white, 10vw 8vh 2px white, 15vw 15vh 1px white,
+        22vw 22vh 1px white, 28vw 12vh 2px white, 32vw 32vh 1px white,
+        38vw 18vh 2px white, 42vw 35vh 1px white, 48vw 25vh 2px white,
+        53vw 42vh 1px white, 58vw 15vh 2px white, 63vw 38vh 1px white,
+        68vw 28vh 2px white, 73vw 45vh 1px white, 78vw 32vh 2px white,
+        83vw 48vh 1px white, 88vw 20vh 2px white, 93vw 52vh 1px white,
+        98vw 35vh 2px white, 5vw 60vh 1px white, 12vw 65vh 2px white,
+        18vw 72vh 1px white, 25vw 78vh 2px white, 30vw 85vh 1px white,
+        35vw 68vh 2px white, 40vw 82vh 1px white, 45vw 92vh 2px white,
+        50vw 75vh 1px white, 55vw 88vh 2px white, 60vw 95vh 1px white,
+        65vw 72vh 2px white, 70vw 85vh 1px white, 75vw 78vh 2px white,
+        80vw 92vh 1px white, 85vw 82vh 2px white, 90vw 88vh 1px white,
+        95vw 75vh 2px white;
+    animation: twinkle 8s infinite linear;
+    z-index: 0;
+}
+
+/* Shooting stars */
+.shooting-star {
+    position: absolute;
+    width: 100px;
+    height: 2px;
+    background: linear-gradient(90deg, white, transparent);
+    top: 0;
+    left: -100px;
+    animation: shoot 3s infinite ease-in;
+    z-index: 0;
+}
+
+.shooting-star:nth-child(2) { top: 20%; animation-delay: 0s; }
+.shooting-star:nth-child(3) { top: 35%; animation-delay: 1s; }
+.shooting-star:nth-child(4) { top: 50%; animation-delay: 2s; }
+.shooting-star:nth-child(5) { top: 65%; animation-delay: 3s; }
+.shooting-star:nth-child(6) { top: 80%; animation-delay: 4s; }
+
+/* Keyframes */
+@keyframes twinkle {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.4; }
+}
+
+@keyframes shoot {
+    0% { transform: translateX(0) translateY(0) rotate(25deg); opacity: 1; }
+    100% { transform: translateX(120vw) translateY(50vh) rotate(25deg); opacity: 0; }
+}
+
+/* Ensure section content stays above stars */
+.section-animated > .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* SECTION ANIMATION WITH BOXES ENDS HERE */
+
 /* HEADER */
 header nav {
     height: 5rem;
@@ -115,6 +188,11 @@ header nav .nav-link:hover {
     padding-right: 1.4rem;
     background-color: #ffffff;
     color: var(--primary-blue);
+}
+
+/*remove that annoying bootstrap outline on link focus*/
+header nav .nav-link:focus {
+    outline: none !important;
 }
 
 header nav .active-link {
@@ -486,19 +564,20 @@ header.sticky nav {
     padding: 2rem 0 0 6rem;
 }
 
-.our-software .software-summary h4 {
-   font-size: 1rem;
+.our-software .software-summary .eyebrow {
+    display: inline-block;
+    font-size: 1rem;
     font-weight: 700;
-    line-height: 2rem;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
 }
 
-.our-software .software-summary h5 {
-    font-size: 2.1rem;
+.our-software .software-summary h2 {
+    font-size: clamp(2rem, 4vw, 2.8rem);
     font-weight: 800;
-    color: var(--primary-dark);
-    letter-spacing: -0.06rem;
-    -webkit-text-stroke: 0.0625rem var(--primary-dark);
+    margin-bottom: 1rem;
 }
 
 .our-software .software-summary p {
@@ -940,9 +1019,16 @@ header.sticky nav {
     cursor: not-allowed;
     opacity: 0.7;
 }
+.space-top {
+        margin-top: 4rem;
+    }
 
 /* Responsive */
 @media (max-width: 768px) {
+
+    .space-top {
+        margin-top: 1.8rem;
+    }
     .free-consultation-section form {
         grid-template-columns: 1fr;
     }
@@ -1114,26 +1200,18 @@ footer p {
     }
 
     /* Sections adjustments */
-    .free-consultation-section,
-    .interests {
+    .free-consultation-section {
         padding: 4rem 0.8rem 4rem 0;
     }
 
-    .free-consultation-section h4,
-    .trusted-section h4,
-    .briefing-cards span {
-        font-size: 1rem;
-        font-weight: 700;
-        line-height: 2rem;
+ .interests {
+    padding-top: 1.5rem !important;
     }
 
-    .free-consultation-section h5,
-    .trusted-section h5,
-    .briefing-cards h2 {
-        font-size: 1.8rem;
-        font-weight: 500;
-        margin-bottom: 1rem !important;
-    }
+.briefing-cards {
+    padding-bottom: 1.5rem !important;
+}
+
 
     .free-consultation-section p,
     .trusted-section p,
@@ -1244,14 +1322,6 @@ footer p {
         padding-top: 0 !important;
     }
 
-    .our-software .software-summary h4 {
-        font-size: 0.9rem;
-    }
-
-    .our-software .software-summary h5 {
-        font-size: 1.8rem;
-        font-weight: 500;
-    }
 
     .our-software .software-summary p {
         font-size: 0.9rem;
@@ -1566,7 +1636,6 @@ footer p {
   padding: 2.5rem 1.5rem 3.5rem;
   text-align: center;
   overflow: hidden;
-  transition: border-color 0.35s ease;
 }
 
 /* CONTENT STACK */
@@ -1613,8 +1682,17 @@ footer p {
 
 /* DESKTOP HOVER ONLY */
 @media (hover: hover) {
+  .contact-card {
+    transition:
+      border-color 0.35s ease,
+      box-shadow 0.35s ease,
+      transform 0.35s ease;
+  }
+
   .contact-card:hover {
     border-color: var(--primary-blue);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+    transform: translateY(-6px);
   }
 
   .contact-card:hover .card-content {
@@ -1645,18 +1723,31 @@ footer p {
   }
 }
 
-@media (hover: hover) {
+
+/* always show the buttons on contact cards on mobile  */
+@media (hover: none) and (pointer: coarse) {
   .contact-card {
-    transition: 
-      border-color 0.35s ease,
-      box-shadow 0.35s ease,
-      transform 0.35s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+    padding-bottom: 2rem;   
   }
 
-  .contact-card:hover {
-    border-color: var(--primary-blue);
-    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
-    transform: translateY(-6px);
+  .contact-card .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    transform: translateY(0);
+  }
+
+  .contact-card .action-btn {
+    position: static;     
+    margin-top: 1rem;     
+    opacity: 1;           
+    transform: none;      
   }
 }
 
@@ -1668,26 +1759,28 @@ footer p {
   margin: 3rem 0 6rem;
 }
 
-.open-modal-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.6rem;
-  padding: 0.85rem 1.8rem;
-  border: 1px solid var(--primary-blue);
-  background: transparent;
-  color: var(--primary-blue);
-  font-size: 0.95rem;
-  font-weight: 600;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.open-modal-btn i {
+.contact-action-btn i {
   font-size: 0.9rem;
 }
 
+.contact-action-btn {
+    background-color: transparent;
+    border: 0.0625rem solid var(--primary-blue);
+    padding: 1rem 1.5rem;
+    border-radius: 0.5rem;
+    font-family: 'Comfortaa', sans-serif;
+    font-size: 0.9rem;
+    transition: background-color 0.7s ease, color 0.7s ease, border 0.7s ease;
+}
+
+.contact-action-btn:hover {
+    background-color: var(--primary-blue);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
 @media (hover: hover) {
-  .open-modal-btn:hover {
+  .contact-action-btn:hover {
     background: var(--primary-blue);
     color: #fff;
   }

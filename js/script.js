@@ -1,8 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
 
-
-
   /* -------------------------------------------------
      PAGE DETECTION
   -------------------------------------------------- */
@@ -31,9 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
-
-
-
   /* -------------------------------------------------
      COUNTER ANIMATION (IntersectionObserver)
   -------------------------------------------------- */
@@ -41,7 +36,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const section = document.querySelector("#ai-change");
 
   if (counters.length && section) {
-    const speed = 200;
+    // here, speed and value are inversly proportional. you get?
+    const speed = 100; 
 
     const animateCounters = () => {
       counters.forEach(counter => {
@@ -79,6 +75,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     observer.observe(section);
   }
+
+
 
   /* -------------------------------------------------
      CONTACT FORM VALIDATION
@@ -187,6 +185,8 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.style.overflow = "auto";
     };
 
+    freeBtn.addEventListener("click", closeMenuFunc);
+
     menuToggle.addEventListener("click", openMenu);
     closeMenu?.addEventListener("click", closeMenuFunc);
     mobileOverlay?.addEventListener("click", closeMenuFunc);
@@ -198,6 +198,48 @@ document.addEventListener("DOMContentLoaded", () => {
         link.classList.add("active-link");
       });
     });
+  }
+
+
+
+    /* -------------------------------------------------
+     CONTACT US MODAL FORM
+  -------------------------------------------------- */
+  const modal = document.getElementById("contactModal");
+  const openBtn = document.querySelector(".open-modal-btn");
+  const closeBtn = document.querySelector(".close-modal");
+  const contactForm = modal.querySelector(".contact-form");
+  const submitBtn = contactForm.querySelector(".submit-btn");
+  const requiredFields = contactForm.querySelectorAll("input[required], textarea[required]");
+
+  if(contactForm) {
+    function validateForm() {
+    const isValid = [...requiredFields].every(field => field.checkValidity());
+    submitBtn.disabled = !isValid;
+  }
+
+  function openModal() {
+    modal.classList.add("active");
+    document.body.classList.add("modal-open");
+  }
+
+  function closeModal() {
+    modal.classList.remove("active");
+    document.body.classList.remove("modal-open");
+    contactForm.reset();
+    submitBtn.disabled = true;
+  }
+
+  openBtn.addEventListener("click", openModal);
+  closeBtn.addEventListener("click", closeModal);
+
+  requiredFields.forEach(field => {
+    field.addEventListener("input", validateForm);
+  });
+
+  contactForm.addEventListener("submit", () => {
+    closeModal();
+  });
   }
 
 });
