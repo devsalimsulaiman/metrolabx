@@ -1548,6 +1548,14 @@ footer p {
         display: none;
     }
 
+    .full-width-on-landscape {
+        width: 100% !important;
+    }
+
+    .contacts, .quick-links {
+        margin-top: 2rem;
+    }
+
     .heroes .carousel-item img {
         height: auto;
         min-height: 100%;
