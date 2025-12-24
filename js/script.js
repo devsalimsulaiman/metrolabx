@@ -207,8 +207,9 @@ document.addEventListener("DOMContentLoaded", () => {
   -------------------------------------------------- */
   const modal = document.getElementById("contactModal");
   const openBtn = document.querySelector(".open-modal-btn");
-  const closeBtn = document.querySelector(".close-modal");
-  const contactForm = modal.querySelector(".contact-form");
+  if(modal) {
+    const closeBtn = document.querySelector(".close-modal");
+    const contactForm = modal.querySelector(".contact-form");
   const submitBtn = contactForm.querySelector(".submit-btn");
   const requiredFields = contactForm.querySelectorAll("input[required], textarea[required]");
 
@@ -240,6 +241,77 @@ document.addEventListener("DOMContentLoaded", () => {
   contactForm.addEventListener("submit", () => {
     closeModal();
   });
+  }
+  }
+
+
+
+  /* -------------------------------------------------
+   SOFTWARE VIDEO MODAL
+-------------------------------------------------- */
+const videoPreviews = document.querySelectorAll(".video-preview");
+  let activeOverlay = null;
+
+  videoPreviews.forEach(preview => {
+    const videoId = preview.dataset.videoId;
+    // Set thumbnail
+    preview.style.backgroundImage = `url("https://img.youtube.com/vi/${videoId}/hqdefault.jpg")`;
+
+    preview.addEventListener("click", () => openVideo(videoId));
+  });
+
+  
+  function openVideo(videoId) {
+    if (activeOverlay) return;
+
+    const overlay = document.createElement("div");
+    overlay.className = "video-overlay";
+
+    // 1. Ensure the URL is clean
+    const iframeSrc = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&enablejsapi=1`;
+    
+    overlay.innerHTML = `
+      <div class="video-frame">
+        <iframe
+          src="${iframeSrc}"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </div>
+    `;
+  
+    document.body.appendChild(overlay);
+    document.body.style.overflow = "hidden";
+    activeOverlay = overlay;
+
+    const iframe = overlay.querySelector("iframe");
+
+    // Listen for iframe load error
+    iframe.addEventListener("error", () => {
+      // If iframe fails, redirect user to YouTube directly
+      window.open(`https://www.youtube.com/watch?v=${videoId}`, "_blank");
+      closeVideo();
+    });
+
+    // Close on backdrop click
+    overlay.addEventListener("click", e => {
+      if (e.target === overlay) closeVideo();
+    });
+
+    document.addEventListener("keydown", escHandler);
+  }
+
+  function closeVideo() {
+    if (!activeOverlay) return;
+    activeOverlay.remove();
+    document.body.style.overflow = "";
+    activeOverlay = null;
+    document.removeEventListener("keydown", escHandler);
+  }
+
+  function escHandler(e) {
+    if (e.key === "Escape") closeVideo();
   }
 
 });
