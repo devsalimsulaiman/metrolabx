@@ -994,7 +994,6 @@ header.sticky nav {
 /* TRUSTEES ---> END */
 
 
-
 /* CONTACT ---> START */
 .free-consultation-section {
     padding: 6rem 1.5rem;
@@ -1550,6 +1549,7 @@ footer p {
 
     .full-width-on-landscape {
         width: 100% !important;
+        margin-bottom: 3rem;
     }
 
     .contacts, .quick-links {
