@@ -981,7 +981,7 @@ header.sticky nav {
     margin-bottom: 1rem;
     line-height: 1.9rem;
     color: #e6f0ff;
-    max-width: 520px;
+    max-width: 100%;
 }
 
 /* Logos Grid */
@@ -2042,6 +2042,20 @@ body.modal-open {
 /* FOR LISTING LIKE PRIVACY, TERMS, CREDITS */
 .last-updated-badge {
     font-size: 0.85rem;
+}
+.attribute-author-badge {
+    background-color: var(--primary-blue);
+    font-size: 0.75rem;
+    opacity: 0.8;
+    margin-left: 1rem;
+}
+@media(max-width:  768px) {
+    .attribute-author-badge {
+    font-size: 0.7rem;
+}
+    .last-updated-badge {
+    font-size: 0.75rem;
+}
 }
 
 .listed-texts h4 {
